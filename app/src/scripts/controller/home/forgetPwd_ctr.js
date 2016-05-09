@@ -1,5 +1,5 @@
 	//忘记密码
-	var forgetPwd_ctr = myApp.controller('forgetPwd_ctr', ['$scope', '$rootScope', '$log', '$timeout', '$http', '$location', 'MyProvider', 'publicFunc', 'ioniclocalStorage', function($scope, $rootScope, $log, $timeout, $http, $location, MyProvider, publicFunc, ioniclocalStorage) {
+		var forgetPwd_ctr = myApp.controller('forgetPwd_ctr', ['$scope', '$rootScope', '$log', '$timeout', '$http', '$location', 'MyProvider', 'publicFunc', 'ioniclocalStorage', '$ionicLoading',function($scope, $rootScope, $log, $timeout, $http, $location, MyProvider, publicFunc, ioniclocalStorage,$ionicLoading) {
 		$scope.mobile = "";
 		$scope.password= "";
    $scope.paracont = "获取短信码";  

@@ -24,16 +24,41 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 			abstract: true,
 			templateUrl: "views/main.html"
 		})
-		//收益
+		//资金管理
 		.state('tabs.gains', {
 			url: "/gains",
 			views: {
 				'gains-tab': {
 					templateUrl: "views/gains/gains.html",
-					controller: 'forgetPwd_ctr'
+					controller: 'gains_ctr'
 				}
 			}
 		})
+			//资金管理
+				.state('gainsManage', {
+			url: "/gainsManage",
+			templateUrl: "views/gains/gainsManage.html",
+			controller: 'forgetPwd_ctr'
+		})
+			//收益明细
+				.state('gainsDetail', {
+			url: "/gainsDetail",
+			templateUrl: "views/gains/gainsDetail.html",
+			controller: 'forgetPwd_ctr'
+		})
+			//每日签到
+				.state('gainsSign', {
+			url: "/gainsSign",
+			templateUrl: "views/gains/gainsSign.html",
+			controller: 'forgetPwd_ctr'
+		})
+			//我的收藏
+				.state('gainsCollection', {
+			url: "/gainsCollection",
+			templateUrl: "views/gains/gainsCollection.html",
+			controller: 'forgetPwd_ctr'
+		})
+		
 		//广告
 		.state('tabs.adviertisement', {
 			url: "/adviertisement",

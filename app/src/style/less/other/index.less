@@ -1,0 +1,87 @@
+.section {
+    background-color: @section-bg-color;
+    border-bottom: 1px solid @border-color;
+    .section-title {
+        padding: 10px;
+        color: @primary-text--grey-color;
+        display: block;
+        line-height: 100%;
+        font-size: 14px;
+    }
+    .section-total-money {
+        margin: 0 10px;
+        color: @primary-text-bule-color;
+        padding: 10px 0 15px;
+        text-align: center;
+        border-bottom: 1px solid @border-color;
+        line-height: 100%;
+        font-size: 50px;
+    }
+    .section-gains-two {
+        margin: 10px 0;
+        height: 60px;
+        .col-50 {
+            padding: 0 15px;
+        }
+        .border-left {
+            border-right: 1px solid @border-color;
+        }
+        .title {
+            font-size: 14px;
+            color: @primary-text--grey-color;
+        }
+        .money {
+            font-size: 20px;
+            line-height: 100%;
+            padding: 10px 0;
+            color: @primary-text-bule-color;
+        }
+    }
+  
+    .section-item {
+        position: relative;
+        &:active{
+            background-color: @primary-bg-color;
+        }
+        .section-title {
+            padding: 10px 0;
+        }
+        .section-icon {
+            width: 35px;
+            height: 30px;
+            margin: 0 auto;
+            background: url("../../images/icon@2x.png") center center no-repeat;
+            //  background-size: 350px 114px;
+            background-size: 175px 57px;
+        }
+        #gains-manage {
+            //background-position: -0px -54px;
+            background-position: -0px -27px;
+        }
+        #gains-detail {
+            //background-position: -77px -27px;
+            background-position: -37px -27px;
+        }
+        #gains-Sign {
+            //  background-position: -156px -27px;
+            background-position: -77px -27px;
+        }
+        #gains-Collection {
+            //      background-position: -239px -27px;
+            background-position: -118px -27px;
+        }
+    }
+    .section-messages-row{
+            padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    }
+    .section-messages{
+           width: 25px;
+    height: 40px;
+    background: url("../../images/icon@2x.png") center center no-repeat;
+    background-size: 200px 65px;
+    background-position: -180px -27px;
+
+    }
+}

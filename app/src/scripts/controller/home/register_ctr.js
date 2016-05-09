@@ -1,5 +1,5 @@
 	//注册
-var register_ctr = myApp.controller('register_ctr', ['$scope', '$interval','$rootScope', '$log', '$timeout', '$http', '$location', 'MyProvider', 'publicFunc', 'ioniclocalStorage', function($scope,$interval, $rootScope, $log, $timeout, $http, $location, MyProvider, publicFunc, ioniclocalStorage) {
+			var register_ctr = myApp.controller('register_ctr', ['$scope', '$rootScope', '$log', '$timeout', '$http', '$location', 'MyProvider', 'publicFunc', 'ioniclocalStorage', '$ionicLoading',function($scope, $rootScope, $log, $timeout, $http, $location, MyProvider, publicFunc, ioniclocalStorage,$ionicLoading) {
 		$scope.mobile = "";
 		$scope.password = "";
 		$scope.mobile = "";

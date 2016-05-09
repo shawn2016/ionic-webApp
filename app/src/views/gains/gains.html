@@ -1,17 +1,94 @@
- <!--收益-->
-    <div class="bar bar-header bar-positive"> 	
-      <div class="position-l0 position-b0 position-l20">收益余额</div>
-        <div class="buttons position-r0">
-        <button class="button button-icon ion-compose">
-        </button>
+<!--收益-->
+<!--<div class="bar bar-header bar-positive"> 	
+     	<h3 class="title">思考广告</h3>
       </div>
       
+    </div>-->
+   <div class="bar bar-header bar-positive">
+    <h3 class="title">思考广告</h3>
     </div>
+<ion-view view-title="收益">
+	<ion-content class="bg  has-header" ng-controller="gains_ctr">
+		   <!--<ion-spinner icon="android"></ion-spinner>-->
+		     <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+		<div class="section">
+			<div class="section-title">
+				账户余额
+			</div>
+			<div class="section-total-money">
+				    		{{income.income_current | currency : '￥'}}
+			</div>
+			<div class="section-gains-two row">
+				<div class="col col-50 border-left">
+					<div class="title">
+						今日收益
+					</div>
+					<div class="money">
+						    		    		{{income.currentdayincome | currency : '￥'}}
 
- <ion-view view-title="收益">
-	<ion-content ng-controller="gains_ctr">
-      <div class="app_panel main-color-bg mt44">
-    	<div class="sum_money">
+					</div>
+				</div>
+				<div class="col col-50">
+					<div class="title">
+						累计收益
+					</div>
+					<div class="money">
+					{{income.income_total | currency : '￥'}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section mt10">
+
+				<div class="row section-messages-row">
+					<div class="section-messages">
+						
+					</div>
+					<div class="section-messages-details">
+						<marquee direction="up"  scrollamount="20"  bgcolor="#fff" scrolldelay="1000" width="100%" height="40">我在区域内滚动，向上哟。。。。</marquee>
+
+					</div>
+				</div>
+
+		</div>
+		<div class="section mt10 ">
+			<div class="row plr10">
+				<div  class=" col-25 pt20b10 section-item text-center" ui-sref="gainsManage">
+					<div class="section-icon" id="gains-manage"></div>
+					<div class="section-title">
+						资金管理
+					</div>
+				</div>
+				<div class=" col-25 pt20b10 section-item text-center"  ui-sref="gainsDetail">
+					<div class="section-icon" id="gains-detail"></div>
+					<div class="section-title">
+						收益明细
+					</div>
+				</div>
+				<div class=" col-25 pt20b10 section-item text-center"  ui-sref="gainsSign">
+					<div class="section-icon" id="gains-Sign"></div>
+					<div class="section-title">
+						每日签到
+					</div>
+				</div>
+				<div class=" col-25 pt20b10 section-item text-center"  ui-sref="gainsCollection">
+					<div class="section-icon " id="gains-Collection"></div>
+					<div class="section-title">
+						我的收藏
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="plr25">
+			<button class="button mt30 button-block  btn-red" on-tap="login()">马上赚钱</button>
+		</div>
+
+		<!--<div class="app-panel mt44">
+      	<div class="sum-money-title">
+      		账户余额
+      	</div>
+    	<div class="sum-money">
 
     		{{income.income_current | currency : '￥'}}
     	</div>
@@ -69,9 +146,6 @@
 						</div>
     	
     </div>
-    </div>
+    </div>-->
 	</ion-content>
 </ion-view>
-  
-
-   
