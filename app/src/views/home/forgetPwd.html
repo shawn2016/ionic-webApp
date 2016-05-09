@@ -1,0 +1,40 @@
+ <!--忘记密码-->
+
+   <div class="bar bar-header bar-positive">
+ 	<a href="#/login">
+ 	        <button class="button button-icon ion-ios-arrow-left"  >
+        </button>
+        </a>
+      <h3 class="title">忘记密码</h3>
+    </div>
+<ion-view view-title="忘记密码" class="bg">
+				<ion-content class="pt10" ng-controller="forgetPwd_ctr">
+					<div class="content has-header">
+						<div class="list">
+							<label class="item item-input">
+          <span class="input-label" >手机号</span>
+          <input type="text"  placeholder="请输入手机号" ng-model="mobile">
+        </label>
+
+							<label class="item item-input">
+          <span class="input-label" >短信码</span>
+          <input type="text"  placeholder="请输入验证码" ng-model="code"   >
+
+            <button class="button button-small button-assertive btn-input-xs" on-tap="forgetPwd_mobile()" ng-disabled="paraevent">{{paracont}}</button>
+        </label>
+
+							<label class="item item-input">
+          <span class="input-label" >密&nbsp;&nbsp;&nbsp;码</span>
+          <input type="password"  placeholder="6 - 16位字母，数字"   ng-model="password">
+        </label>
+
+						</div>
+						<div class="plr10">
+							<button class="button  button-block  btn-red" on-tap="forgetPwd()">确定</button>
+						</div>
+
+					</div>
+				</ion-content>
+			</ion-view>
+
+   

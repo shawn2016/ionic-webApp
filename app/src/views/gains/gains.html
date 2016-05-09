@@ -1,0 +1,77 @@
+ <!--收益-->
+    <div class="bar bar-header bar-positive"> 	
+      <div class="position-l0 position-b0 position-l20">收益余额</div>
+        <div class="buttons position-r0">
+        <button class="button button-icon ion-compose">
+        </button>
+      </div>
+      
+    </div>
+
+ <ion-view view-title="收益">
+	<ion-content ng-controller="gains_ctr">
+      <div class="app_panel main-color-bg mt44">
+    	<div class="sum_money">
+
+    		{{income.income_current | currency : '￥'}}
+    	</div>
+    </div>
+  
+      <div class="gains_section">
+      	<div class="gains_section_left">
+      		<div class="money">
+
+    		    		{{income.currentdayincome | currency : '￥'}}
+    	</div>
+    	<div class="title">
+    		今天收益
+    	</div>
+      	</div>
+    		<div class="gains_section_right">
+      				<div class="money">
+
+    		    		{{income.income_total | currency : '￥'}}
+    	</div>
+    	<div class="title">
+    		累计收益
+    	</div>
+      	</div>
+    </div>
+         <div class="gains_section">
+         	<div class="message">	
+      <i class="ion ion-volume-high">
+      	
+      </i>
+    	  <span class="descript">
+      	或者哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+      </span>
+      </div>
+    </div>
+         <div class="gains_section">
+      	<div class="gains_section_left">
+      		<i class="ion ion-cash">    		
+    	</i>
+    	<div class="title">
+    		资金管理
+    	</div>
+      	</div>
+    		<div class="gains_section_right">
+      		<i class="ion ion-arrow-graph-up-right">    		
+    	</i>
+    	<div class="title">
+    		收益明细
+    	</div>
+      	</div>
+    </div>
+         <div class="gains_section" style="border:none ;">
+      	<div class="plr10">
+							<button class="button  button-block  btn-red" on-tap="login()">马上赚钱</button>
+						</div>
+    	
+    </div>
+    </div>
+	</ion-content>
+</ion-view>
+  
+
+   
