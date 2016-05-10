@@ -175,6 +175,32 @@ a {
 .button.active {
   background-color: #529dff;
 }
+.popup-container .popup {
+  border-radius: 5px;
+}
+.popup-container .popup .popup-head {
+  padding: 15px 10px 10px;
+  border-bottom: transparent;
+}
+.popup-container .popup .popup-body {
+  text-align: center;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 0px 10px 20px 10px;
+  overflow: auto;
+}
+.popup-container .popup .popup-buttons {
+  padding: 0 10px;
+  min-height: auto;
+}
+.popup-container .popup .popup-buttons .button.button-positive {
+  border-color: transparent;
+  background-color: transparent;
+  color: #529dff;
+  cursor: pointer;
+}
+.popup-container .popup .popup-buttons .button.button-default {
+  border-right: 1px solid #d8d8d8;
+}
 .section {
   background-color: #ffffff;
   border-bottom: 1px solid #d8d8d8;

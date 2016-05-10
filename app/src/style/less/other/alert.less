@@ -1,0 +1,29 @@
+.popup-container {
+    .popup {
+        border-radius: 5px;
+        .popup-head{
+                padding: 15px 10px 10px;
+                        border-bottom: transparent;
+        }
+        .popup-body {
+            text-align: center;
+            border-bottom: 1px solid @border-color;
+                padding: 0px 10px 20px 10px;
+    overflow: auto;
+        }
+        .popup-buttons {
+            padding: 0 10px;
+            min-height: auto;
+            .button.button-positive {
+                border-color: transparent;
+                background-color: transparent;
+                color: @primary-text-bule-color;
+                cursor: pointer;
+            }
+            .button.button-default{
+                border-right: 1px solid @border-color;
+            }
+            
+        }
+    }
+}

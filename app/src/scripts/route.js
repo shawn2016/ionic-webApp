@@ -89,5 +89,12 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 				}
 			}
 		})
+		
+			//listDemo
+				.state('listDemo', {
+			url: "/listDemo",
+			templateUrl: "views/list/listDemo.html",
+			controller: 'listDemo_ctr'
+		})
 	$urlRouterProvider.otherwise("/login");
 })

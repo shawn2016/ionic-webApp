@@ -1,4 +1,4 @@
-var myApp = angular.module('ionicApp', ['ionic'])
+var myApp = angular.module('ionicApp', ['ionic','angularMoment'])
    myApp.run(function($ionicPlatform) {
         $ionicPlatform.ready(function() {
           // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -11,3 +11,4 @@ var myApp = angular.module('ionicApp', ['ionic'])
           }
         });
       })
+   
