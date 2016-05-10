@@ -1,0 +1,38 @@
+	//listDemo_ctr
+		var listDemo_ctr = myApp.controller('listDemo_ctr', ['$scope', '$rootScope', '$log', '$timeout', '$http', '$location', 'MyProvider', 'publicFunc', 'ioniclocalStorage', '$ionicLoading',function($scope, $rootScope, $log, $timeout, $http, $location, MyProvider, publicFunc, ioniclocalStorage,$ionicLoading) {
+		 $scope.stories = [];
+ 
+    function loadStories(params, callback) {
+      var stories = [];
+      $http.get('../src/data/item.json', {params: params})
+        .success(function (response) {
+          angular.forEach(response.data.children, function (child) {
+            stories.push(child.data);
+          });
+          callback(stories);
+        });
+ 
+    }
+ 
+    $scope.loadOlderStories = function () {
+      var params = {};
+      if ($scope.stories.length > 0) {
+        params['after'] = $scope.stories[$scope.stories.length - 1].name;
+      }
+      loadStories(params, function (olderStories) {
+        $scope.stories = $scope.stories.concat(olderStories);
+        $scope.$broadcast('scroll.infiniteScrollComplete');
+      });
+ 
+    }
+ 
+    $scope.loadNewerStories = function () {
+      var params = {};
+      params['before'] = $scope.stories[0].name;
+      loadStories(params, function (newerStories) {
+        $scope.stories = newerStories.concat($scope.stories);
+        $scope.$broadcast('scroll.refreshComplete');
+      });
+    }
+	}])
+	

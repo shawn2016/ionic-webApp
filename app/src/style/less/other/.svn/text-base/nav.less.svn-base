@@ -1,0 +1,16 @@
+.bar.bar-positive {
+    border-color: @border-color;
+    background-color: @primary-color;
+    background-image: linear-gradient(0deg,@primary-color,@primary-color 50%,transparent 100%);
+    color: #fff;
+// height: 70px;
+}
+.tabs-positive>.tabs, .tabs.tabs-positive{
+      border:1px solid @border-color;
+    background-color: @footer-bg-color;
+    background-image: linear-gradient(0deg,@footer-bg-color,@footer-bg-color 50%,transparent 100%);
+    color: @primary-grey-color-dark
+}
+.no-header {
+    top: 0
+}

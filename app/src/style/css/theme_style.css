@@ -176,7 +176,12 @@ a {
   background-color: #529dff;
 }
 .popup-container .popup {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 .popup-container .popup .popup-head {
   padding: 15px 10px 10px;
