@@ -11,12 +11,13 @@
 
 	<body>
 		<ion-nav-view></ion-nav-view>
+		
 <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
 		<!--ionic-->
 		<script src="ionic/js/ionic.bundle.min.js"></script>
 		<!--<script src="http://cdn.bootcss.com/moment.js/2.13.0/moment.min.js"></script>
 		<script src="http://cdn.bootcss.com/angular-moment/1.0.0-beta.6/angular-moment.min.js"></script>-->
-
+		<script type="text/javascript" src="scripts/Plugin/echarts.min.js"></script>
 		 <!--<script src="http://cdn.bootcss.com/ng-cordova/0.1.26-alpha/ng-cordova.min.js"></script>-->
 		<!--mainJs-->
 		<script type="text/javascript" src="scripts/App.js"></script>
@@ -31,8 +32,11 @@
 		<!--gains-controller-->
 		<script type="text/javascript" src="scripts/controller/gains/gains_ctr.js"></script>
 	    <script type="text/javascript" src="scripts/controller/list/listDemo_ctr.js"></script>
-	
-
+		    <script type="text/javascript" src="scripts/controller/gains/gainsDetail_ctr.js"></script>
+		    <script type="text/javascript" src="scripts/controller/gains/gainsManage_ctr.js"></script>
+		    <script type="text/javascript" src="scripts/controller/gains/gainsSign_ctr.js"></script>
+		    <!--邀请-->
+		 <script type="text/javascript" src="scripts/controller/invite/invite_ctr.js"></script>
 	</body>
 
 </html>

@@ -7,7 +7,7 @@ layout.less
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/svn/advertisement_h5/!svn/ver/2/app/src/style/less/other/layout.less
+/svn/advertisement_h5/!svn/ver/3/app/src/style/less/other/layout.less
 END
 loading.less
 K 25
@@ -19,7 +19,7 @@ btn.less
 K 25
 svn:wc:ra_dav:version-url
 V 66
-/svn/advertisement_h5/!svn/ver/1/app/src/style/less/other/btn.less
+/svn/advertisement_h5/!svn/ver/3/app/src/style/less/other/btn.less
 END
 nav.less
 K 25
@@ -37,11 +37,11 @@ index.less
 K 25
 svn:wc:ra_dav:version-url
 V 68
-/svn/advertisement_h5/!svn/ver/2/app/src/style/less/other/index.less
+/svn/advertisement_h5/!svn/ver/3/app/src/style/less/other/index.less
 END
 variables.less
 K 25
 svn:wc:ra_dav:version-url
 V 72
-/svn/advertisement_h5/!svn/ver/2/app/src/style/less/other/variables.less
+/svn/advertisement_h5/!svn/ver/3/app/src/style/less/other/variables.less
 END

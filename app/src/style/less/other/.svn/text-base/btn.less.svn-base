@@ -4,6 +4,12 @@
     font-size: 15px;
     height: 35px;
 }
+.btn-grey{
+    background-color: @border-color;
+    color: #333;
+    font-size: 15px;
+    height: 35px;
+}
 
 .btn-input-xs{
         margin-right: 20px;
@@ -21,7 +27,7 @@
     text-decoration: none;
     cursor: pointer;
 }
-.button.activated,.button.active {
+.btn-red.activated,.btn-red.active {
     background-color: @primary-color-dark;
     
 }

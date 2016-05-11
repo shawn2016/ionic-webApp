@@ -5,11 +5,39 @@
  	        <button class="button button-icon ion-ios-arrow-left"  >
         </button>
         </a>
-      <h3 class="title">资金管理</h3>
+      <h3 class="title">签到</h3>
     </div>
-<ion-view view-title="忘记密码" class="bg">
-				<ion-content class="pt10" ng-controller="forgetPwd_ctr">
-			资金管理
+<ion-view view-title="签到" class="bg">
+	<ion-content class="has-header" ng-controller="gainsSign_ctr">
+		<div class="section sing-img">			
+  <ion-slide-box active-slide="myActiveSlide" does-continue="true" slide-interval="2000">
+    <ion-slide>
+      <div class="box">
+      	<img src="../src/images/sign.png" alt="" />
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="box" >
+      	      	<img src="../src/images/sign2.png" alt="" />
+      </div>
+    </ion-slide>
+   
+  </ion-slide-box>
+  </div>
+			<!--<div class="section sing-img">
+		<img src="../src/images/sign.png" alt="" />
+		</div>-->
+		<div class="section-sign">
+			你已经签到<span class="numer">3</span>天，上次签到时间<span class="numer">2016.03.08</span>
+		</div>
+			 <div class="plr25">
+			<button class="button mt30 button-block  btn-red" on-tap="login()">立即签到</button>
+		</div>
+			<div class="section-sign-rule">
+			<p>签到规则</p>
+				<p>1.为用户获得高额收益.</p>
+					<p>2.用户获得利益的前提是每日签到,五天为一个周期,用户连续签到五天,系统自动给用户返现人民币0.5元.30天为一个自然月,用户连续签到,最高可获得人民币2.5元</p>
+		</div>
 				</ion-content>
 			</ion-view>
 

@@ -7,9 +7,27 @@
         </a>
       <h3 class="title">资金管理</h3>
     </div>
-<ion-view view-title="忘记密码" class="bg">
-				<ion-content class="pt10" ng-controller="forgetPwd_ctr">
-			资金管理
+<ion-view view-title="资金管理" class="bg">
+				<ion-content class="has-header" ng-controller="gainsManage_ctr">
+				<div class="section">
+			<div class="section-title">
+				账户余额
+			</div>
+			<div class="section-total-money bt0">
+				  {{income.income_current | currency : '￥'}}
+			</div>
+	
+		</div>
+			<div class="plr25">
+
+			 <button  class="button mt30 button-outline width100 button-positive"  on-tap="login()">转出</button>
+		</div>
+		<div class="record-list">
+			<div class="record-list-title">
+				转账记录
+			</div>
+			
+		</div>
 				</ion-content>
 			</ion-view>
 

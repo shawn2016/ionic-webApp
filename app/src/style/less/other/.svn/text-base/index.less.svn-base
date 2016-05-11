@@ -83,31 +83,314 @@
         background-position: -180px -27px;
     }
     //invite
- .section-total-money-title{
-color: @primary-text--grey-color;
-font-size:14px ;
- }
- .invite-title{
-     text-align: center;
-         margin: 20px;
-     .invite-title-desc{
-         line-height:35px ;
-     }
-     .invite-title-copy{
-         font-size: xx-small;
-    color: @primary-text--grey-color;
-     }
- }
- .invite-message{
-     .message{
-         padding: 0px 20px;
-     }
-     .setp{
-     border: 1px solid @border-color;
-    border-radius: 5px;
+    .section-total-money-title {
+        color: @primary-text--grey-color;
+        font-size: 14px;
+    }
+    .invite-title {
+        text-align: center;
+        margin: 20px;
+        .invite-title-desc {
+            line-height: 35px;
+        }
+        .invite-title-copy {
+            font-size: xx-small;
+            color: @primary-text--grey-color;
+        }
+    }
+    .invite-message {
+        .message {
+            padding: 0 20px;
+        }
+        .setp {
+            border: 1px solid @border-color;
+            border-radius: 5px;
+            text-align: center;
+            padding: 5px;
+            margin: 0 3px;
+        }
+    }
+}
+//rule
+.rule {
+    padding: 15px 10px;
+    .q-title{
+            color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    }
+    .line-height {
+        line-height: 30px;
+        .title-one {
+            color: @primary-text-bule-color;
+        }
+        .title-two {
+            color: @primary-text--grey-color;
+        }
+        .title-one-desc {
+            font-weight: bold;
+            color: @primary-text-bule-color;
+        }
+        .title-two-desc {
+            color: @primary-text--grey-color;
+        }
+    }
+}
+//gainsDeatil
+.main {
+    padding: 0 20px;
+}
+.gainsDetail {
     text-align: center;
-    padding: 5px;
-    margin: 0 5px;
-     }
- }
+    margin: 20px 15px 0;
+    border-bottom: 1px solid @border-color;
+    .left-box {
+        padding: 10px;
+        border-right: 1px solid @border-color;
+    
+        
+    }
+    .left-box,.right-box{
+            .img{
+
+    background: url(../../images/gainsDetil.png);
+    background-size: 150px 25px;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+        }
+        .img-a{
+
+                background-position: -85px 0px;
+        }
+         .img-b{
+                background-position: -125px 0px;
+        }
+         .img-c{
+                background-position: 0px 0px;
+        }
+         .img-d{
+                 background-position: -40px 0px;
+        }
+        .text{
+            text-align: left;
+        }
+    }
+    .right-box {
+        padding: 10px;
+
+      
+    }
+    .left-box-left {
+        color: @primary-text--grey-color;
+              position: relative;
+     
+    }
+    .left-box-left-money {
+        color: @primary-text-bule-color;
+    }
+}
+//gains-sign
+.section-sign {
+    text-align: center;
+    padding: 40px 10px 0;
+    font-size: 14px;
+    .numer {
+        color: @primary-text-bule-color;
+        font-size: 18px;
+    }
+}
+.sing-img {
+    .box{
+        height: inherit;
+    }
+    img{
+        height: inherit;
+        width: 100%;
+    }
+    .slider-slides {
+        width: 100%;
+        height: 33%;
+    }
+}
+.section-sign-rule{
+    
+    border: 2px solid @primary-text-bule-color;
+    margin: 40px 10px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    color: @primary-text--grey-color;
+}
+//PIM
+.icon-logo{
+    background: url(../../images/profile.png);
+    background-size: 200px 20px;
+    width: 20px;
+    position: absolute;
+    left: 25;
+    top: 8;
+    height: 20px;
+}
+.icon-logo-a{
+                 background: url(../../images/head.png);
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+}
+.icon-logo-b{
+    background-position: 0px 0px;
+}
+.icon-logo-c{
+    background-position: -22px 0px;
+}
+.icon-logo-d{
+    background-position: -45px 0px;
+}
+.icon-logo-e{
+    background-position: -45px 0px;
+}
+.icon-logo-f{
+    background-position: -67px 0px;
+}
+.icon-logo-g{
+ background-position: -90px 0px;
+}
+.icon-logo-h{
+      background-position: -113px 0px;
+
+}
+.icon-logo-i{
+    background-position: -136px 0px;
+}
+.icon-logo-j{
+    background-position: -160px 0px;
+}
+.icon-logo-k{
+    background-position: -180px 0px;
+}
+
+
+.profile{
+    .item{
+        border-color: transparent !important;
+    }
+    .profile-list-border{
+        margin: 0 10px;
+    border: transparent;
+    border-top: 1px solid;
+      border-color: @border-color !important;
+        .icon-logo{
+            left: 15px;
+        }
+    
+}
+.couponMoney{
+    padding-right: 10px;
+    color: @primary-text-bule-color;
+    font-size:18px ;
+}
+.couponNumber{
+    font-size:18px ;
+    color: @primary-text--grey-color;
+}
+}
+//adviertisement
+.adviertisement{
+    position: absolute;
+    width: 100%;
+   .section-total-money-sm{
+         padding: 10px 0 0;
+    color: #529dff;
+    text-align: center;
+    position: absolute;
+    z-index: 6;
+    background-color: #fff;
+    width: 100%;
+   } 
+   .tabs{
+       background-color: #FFF !important;
+       top: 20px !important;
+       .tab-item{
+           color: @primary-text--grey-color;
+           .activated{
+               color: @primary-text-bule-color !important;
+           }
+       }
+       .active{
+               border: 0 solid @primary-text-bule-color !important;
+               color: @primary-text-bule-color !important;
+           }
+   }
+}
+.img-list{
+.img-box{
+    position: relative;
+    margin:10px;
+
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 1px 1 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    img{
+        width: 100%;
+        height: 165px;
+    }
+    .img-title-box{
+    position: absolute;
+    bottom: 0px;
+    line-height: 25px;
+    width: 100%;
+    font-size: 12px;
+        background-color: rgba(0,0,0,.5);
+    color: #fff;
+    .img-title-box-left{
+        
+      padding-left:10px;
+    }
+     .img-title-box-right{
+            float: right;
+    padding-right: 10px;
+
+    }
+    }
+    .img-status{
+       position: absolute;
+    top: 10;
+    min-width: 45px;
+    min-height: 45px;
+    /* padding: 30px; */
+    font-size: 12px;
+    right: 10px;
+    background-color: #FDC24F;
+    text-align: center;
+    font-weight: 700;
+    line-height: 45px;
+    color: #fff;
+    padding: 0px;
+    border-radius: 100%;
+    }
+}
+}
+.response{
+    textarea{
+
+        width: 100%;
+
+
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    vertical-align: middle;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    .border-radius(4px);
+    
+    }
+    .title-number{
+        color: red;
+        font-size: 12px;
+        padding:0 10px 10px;
+    }
 }
