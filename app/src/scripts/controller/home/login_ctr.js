@@ -46,8 +46,7 @@ animation: 'fade-in'
 			publicFunc.showAlert("温馨提示", "手机格式不正确");
 			}
 			}
-			
-
-			
 		}
+
+
 	}])

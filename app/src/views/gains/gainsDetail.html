@@ -14,37 +14,68 @@
 			 <div class="gainsDetail">
 			 	<div class="row">
 			 		<div class="col col-50 left-box">
-			 			<div class="left-box-left">
-			 				<span>图片</span><span>签到收益</span>
+			 			<div class="row">
+			 				<div class="col-30 img img-a"></div>
+			 			<div class="col-70">
+			 				<div class="left-box-left">
+			 				<span>签到收益</span>
 </div>
-			 			<div class="left-box-left-money">@0</div>
+			 			<div class="left-box-left-money text">
+
+			 				{{fourNumbers.income_check_in | currency : '￥'}}
+			 			</div></div>
+			 			
+			 			</div>
+			 			
 </div>
 			 		<div class="col col-50 right-box">
+			 				<div class="row">
+			 				<div class="col-30 img img-b"></div>
+			 			<div class="col-70">
 			 				<div class="left-box-left">
-			 				<span>图片</span><span>签到收益</span>
+			 				<span>推广收益</span>
 </div>
-			 			<div class="left-box-left-money">@0</div>
+			 			<div class="left-box-left-money text">
+
+			 			{{fourNumbers.income_invitation | currency : '￥'}}
+			 			</div></div>
+			 			
+			 			</div>
 			 		</div>
 			 	</div>
 			 </div>
 			  <div class="gainsDetail" style="border: transparent;margin: 0 15px;">
 			 	<div class="row">
 			 		<div class="col col-50 left-box">
+			 				<div class="row">
+			 				<div class="col-30 img img-c"></div>
+			 			<div class="col-70">
 			 				<div class="left-box-left">
-			 				<span>图片</span><span>签到收益</span>
+			 				<span>广告收益</span>
 </div>
-			 			<div class="left-box-left-money">@0</div>
+			 			<div class="left-box-left-money text">
+			 			{{fourNumbers.income_adv | currency : '￥'}}
+</div></div>
+			 			
+			 			</div>
 			 		</div>
 			 		<div class="col col-50 right-box">
+			 				<div class="row">
+			 				<div class="col-30 img img-d"></div>
+			 			<div class="col-70">
 			 				<div class="left-box-left">
-			 				<span>图片</span><span>签到收益</span>
+			 				<span>分享收益</span>
 </div>
-			 			<div class="left-box-left-money">@0</div>
+			 			<div class="left-box-left-money text">
+			 				{{fourNumbers.income_share | currency : '￥'}}
+			 			</div></div>
+			 			
+			 			</div>
 			 		</div>
 			 	</div>
 			 </div>
 			 <div class="plr25">
-			<button class="button mt30 button-block  btn-red" on-tap="login()">马上赚钱</button>
+			<button class="button mt30 button-block  btn-red" on-tap="tiaozhuan('/tab/adviertisement')">赚更多钱</button>
 		</div>
 				</ion-content>
 			</ion-view>

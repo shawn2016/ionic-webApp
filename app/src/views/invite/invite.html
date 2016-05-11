@@ -8,30 +8,33 @@
 </div>
 
 <ion-view view-title="邀请好友">
-	<ion-content class="bg has-header">
+	<ion-content class="bg has-header" ng-controller="invite_ctr">
 	<div class="section">
 			
 			<div class="section-total-money pt20 border0" style="line-height: 80%;">
-				    		5555
+				    		
+				    						    		{{inviteInfo.inviteOneIncoming | currency : '￥'}}
 				    		<div class="section-total-money-title">
-				累计邀请收益
+				每邀请一位好友可获得收益
 			</div>
 			</div>
 			
 			<div class="section-gains-two row bt1 text-center">
 				<div class="col col-50 border-left ">
 						<div class="money pt10b0">
-						    		    		22222
+						    		    {{inviteInfo.invitecount}}
+						    		    	
 
 					</div>
 					<div class="title">
-						今日收益
+						成功邀请
 					</div>
 				
 				</div>
 				<div class="col col-50">
 					<div class="money pt10b0">
-					55555
+						{{inviteInfo.income_invitation | currency : '￥'}}
+					
 					</div>
 					<div class="title">
 						累计收益
@@ -49,7 +52,7 @@
 </div>
 			</div>
 			<div class="plr25">
-			<button class="button mt30 button-block  btn-red" on-tap="login()">马上赚钱</button>
+			<button class="button mt30 button-block  btn-red" on-tap="login()">立即邀请</button>
 		</div>
 		<div class="invite-message">
 			<div class="message">
@@ -64,15 +67,15 @@
 				</div>
 				</div>
 				<div class="col col-30 setp">
-						第一步
+						第二步
 					<div>
 					分享给好友
 				</div>
 </div>
 				<div class="col col-30 setp">
-						第一步
+						第三步
 					<div>
-					复制邀请码给好友
+					发送邀请码
 				</div>
 </div>
 			</div>

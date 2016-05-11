@@ -1,15 +1,15 @@
 //收益
 var gains_ctr = myApp.controller('gains_ctr', ['$scope', '$rootScope', '$log', '$timeout', '$http', '$location', 'MyProvider', 'publicFunc', 'ioniclocalStorage', '$ionicLoading', function($scope, $rootScope, $log, $timeout, $http, $location, MyProvider, publicFunc, ioniclocalStorage, $ionicLoading) {
 	//初始化income
-	$scope.income = {
+	$rootScope.income = {
 		income_current: 0,
 		currentdayincome: 0,
 		income_total: 0
 	};
 
 	//获取本地缓存数据
-	$scope.userInfo = ioniclocalStorage.getObject("userInfo");
-	$log.info($scope.userInfo);
+	$rootScope.userInfo = ioniclocalStorage.getObject("userInfo");
+	$log.info($rootScope.income);
 	// loading
 //	$ionicLoading.show({
 //		content: '数据加载中',
@@ -21,13 +21,14 @@ var gains_ctr = myApp.controller('gains_ctr', ['$scope', '$rootScope', '$log', '
 	//加载收益情况
 	$scope.getGains = function() {
 
-			var url = MyProvider.domain + "/user/userIncome.do?token=" + $scope.userInfo.token +
-				"&uid=" + $scope.userInfo.uid;
+			var url = MyProvider.domain + "/user/userIncome.do?token=" + $rootScope.userInfo.token +
+				"&uid=" + $rootScope.userInfo.uid;
 			$log.info(url);
 			$http.get(url)
 				.success(function(response) {
 					if (response.status.msg == "SUCCESS") {
-						$scope.income = response.result;
+						$rootScope.income = response.result;
+						ioniclocalStorage.setObject('gainsInfo',response.result ); 
 						$ionicLoading.hide();
 					} else {
 						publicFunc.showAlert("温馨提示", response.status.msg);

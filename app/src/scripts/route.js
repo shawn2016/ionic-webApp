@@ -144,7 +144,18 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 			templateUrl: "views/profile/profileSetup.html",
 
 		})
+		//						帮助
+		.state('help', {
+			url: "/help",
+			templateUrl: "views/profile/help.html",
 
+		})
+//						意见反馈
+		.state('response', {
+			url: "/response",
+			templateUrl: "views/profile/response.html",
+
+		})
 	//listDemo
 	.state('listDemo', {
 		url: "/listDemo",

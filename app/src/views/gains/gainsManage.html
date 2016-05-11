@@ -8,13 +8,13 @@
       <h3 class="title">资金管理</h3>
     </div>
 <ion-view view-title="资金管理" class="bg">
-				<ion-content class="has-header" ng-controller="forgetPwd_ctr">
+				<ion-content class="has-header" ng-controller="gainsManage_ctr">
 				<div class="section">
 			<div class="section-title">
 				账户余额
 			</div>
 			<div class="section-total-money bt0">
-				    		3333
+				  {{income.income_current | currency : '￥'}}
 			</div>
 	
 		</div>
