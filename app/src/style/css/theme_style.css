@@ -26,8 +26,17 @@
 /*bar-color*/
 /*footer-color*/
 /*black-color*/
+.p20 {
+  padding: 20px !important;
+}
+.pt10b0 {
+  padding: 10px 0px 0px !important;
+}
 .pt10 {
   padding-top: 10px !important;
+}
+.pl44 {
+  padding-left: 44px !important;
 }
 .pt20 {
   padding-top: 20px !important;
@@ -44,11 +53,20 @@
 .plr25 {
   padding: 0 25px !important;
 }
+.pl20 {
+  padding-left: 20px !important;
+}
+.pl10 {
+  padding-left: 10px !important;
+}
 .mt44 {
   margin-top: 44px !important;
 }
 .mt20 {
   margin-top: 20px !important;
+}
+.m20 {
+  margin: 20px !important;
 }
 .mt10 {
   margin-top: 10px !important;
@@ -90,6 +108,18 @@
 }
 .bt1 {
   border-bottom: 1px solid #dddddd;
+}
+.b0 {
+  border: transparent;
+}
+.bt0 {
+  border-bottom: transparent !important;
+}
+.pt8l15 {
+  padding: 8px 15px ;
+}
+.width100 {
+  width: 100%;
 }
 html,
 body {
@@ -133,6 +163,9 @@ a {
 }
 .bg {
   background-color: #f6f6f4;
+}
+.white-bg {
+  background-color: #fff ;
 }
 .bar.bar-positive {
   border-color: #d8d8d8;
@@ -205,6 +238,24 @@ a {
 }
 .popup-container .popup .popup-buttons .button.button-default {
   border-right: 1px solid #d8d8d8;
+}
+.list .item {
+  padding: 8px;
+  font-size: 14px;
+}
+.list .item-frist {
+  min-height: 60px;
+}
+.list .item-divider {
+  min-height: 10px;
+  padding: 0;
+}
+.list .item-icon-left {
+  padding-left: 54px;
+}
+.list .item-middle {
+  width: 90%;
+  margin: 0 auto;
 }
 .section {
   background-color: #ffffff;
@@ -285,4 +336,147 @@ a {
   background: url("../../images/icon@2x.png") center center no-repeat;
   background-size: 200px 65px;
   background-position: -180px -27px;
+}
+.section .section-total-money-title {
+  color: #666666;
+  font-size: 14px;
+}
+.section .invite-title {
+  text-align: center;
+  margin: 20px;
+}
+.section .invite-title .invite-title-desc {
+  line-height: 35px;
+}
+.section .invite-title .invite-title-copy {
+  font-size: xx-small;
+  color: #666666;
+}
+.section .invite-message .message {
+  padding: 0 20px;
+}
+.section .invite-message .setp {
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  margin: 0 5px;
+}
+.rule {
+  padding: 15px 10px;
+}
+.rule .line-height {
+  line-height: 30px;
+}
+.rule .line-height .title-one {
+  color: #529dff;
+}
+.rule .line-height .title-two {
+  color: #666666;
+}
+.rule .line-height .title-one-desc {
+  font-weight: bold;
+  color: #529dff;
+}
+.rule .line-height .title-two-desc {
+  color: #666666;
+}
+.main {
+  padding: 0 20px;
+}
+.gainsDetail {
+  text-align: center;
+  margin: 20px 15px 0;
+  border-bottom: 1px solid #d8d8d8;
+}
+.gainsDetail .left-box {
+  padding: 10px;
+  border-right: 1px solid #d8d8d8;
+}
+.gainsDetail .right-box {
+  padding: 10px;
+}
+.gainsDetail .left-box-left {
+  color: #666666;
+}
+.gainsDetail .left-box-left-money {
+  color: #529dff;
+}
+.section-sign {
+  text-align: center;
+  padding: 40px 10px 0;
+  font-size: 14px;
+}
+.section-sign .numer {
+  color: #529dff;
+  font-size: 18px;
+}
+.sing-img img {
+  width: 100%;
+  height: 33%;
+}
+.section-sign-rule {
+  border: 2px solid #529dff;
+  margin: 40px 10px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 10px;
+  color: #666666;
+}
+.icon-logo {
+  background: url(../../images/profile.png);
+  background-size: 200px 20px;
+  width: 20px;
+  position: absolute;
+  left: 25;
+  top: 8;
+  height: 20px;
+}
+.icon-logo-a {
+  background: url(../../images/head.png);
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+}
+.icon-logo-b {
+  background-position: 0px 0px;
+}
+.icon-logo-c {
+  background-position: -22px 0px;
+}
+.icon-logo-d {
+  background-position: -45px 0px;
+}
+.icon-logo-e {
+  background-position: -45px 0px;
+}
+.icon-logo-f {
+  background-position: -67px 0px;
+}
+.icon-logo-g {
+  background-position: -90px 0px;
+}
+.icon-logo-h {
+  background-position: -113px 0px;
+}
+.icon-logo-i {
+  background-position: -136px 0px;
+}
+.icon-logo-j {
+  background-position: -160px 0px;
+}
+.icon-logo-k {
+  background-position: -180px 0px;
+}
+.profile .item {
+  border-color: transparent !important;
+}
+.profile .profile-list-border {
+  margin: 0 10px;
+  border: transparent;
+  border-top: 1px solid;
+  border-color: #d8d8d8 !important;
+}
+.profile .profile-list-border .icon-logo {
+  left: 15px;
 }

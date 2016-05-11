@@ -11,13 +11,13 @@ var gains_ctr = myApp.controller('gains_ctr', ['$scope', '$rootScope', '$log', '
 	$scope.userInfo = ioniclocalStorage.getObject("userInfo");
 	$log.info($scope.userInfo);
 	// loading
-	$ionicLoading.show({
-		content: '数据加载中',
-		animation: 'fade-in',
-		showBackdrop: true,
-		maxWidth: 200,
-		showDelay: 0
-	});
+//	$ionicLoading.show({
+//		content: '数据加载中',
+//		animation: 'fade-in',
+//		showBackdrop: true,
+//		maxWidth: 200,
+//		showDelay: 0
+//	});
 	//加载收益情况
 	$scope.getGains = function() {
 

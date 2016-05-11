@@ -5,11 +5,47 @@
  	        <button class="button button-icon ion-ios-arrow-left"  >
         </button>
         </a>
-      <h3 class="title">资金管理</h3>
+      <h3 class="title">收益明细</h3>
     </div>
-<ion-view view-title="忘记密码" class="bg">
-				<ion-content class="pt10" ng-controller="forgetPwd_ctr">
-			资金管理
+<ion-view view-title="忘记密码" class="white-bg">
+				<ion-content class="pt10 has-header" ng-controller="gainsDetail_ctr">
+			 <div id="main" style="width: auto;height:200px;"></div>
+			 <div class="main">收益图横轴为日期,纵轴为您当天的收益</div>
+			 <div class="gainsDetail">
+			 	<div class="row">
+			 		<div class="col col-50 left-box">
+			 			<div class="left-box-left">
+			 				<span>图片</span><span>签到收益</span>
+</div>
+			 			<div class="left-box-left-money">@0</div>
+</div>
+			 		<div class="col col-50 right-box">
+			 				<div class="left-box-left">
+			 				<span>图片</span><span>签到收益</span>
+</div>
+			 			<div class="left-box-left-money">@0</div>
+			 		</div>
+			 	</div>
+			 </div>
+			  <div class="gainsDetail" style="border: transparent;margin: 0 15px;">
+			 	<div class="row">
+			 		<div class="col col-50 left-box">
+			 				<div class="left-box-left">
+			 				<span>图片</span><span>签到收益</span>
+</div>
+			 			<div class="left-box-left-money">@0</div>
+			 		</div>
+			 		<div class="col col-50 right-box">
+			 				<div class="left-box-left">
+			 				<span>图片</span><span>签到收益</span>
+</div>
+			 			<div class="left-box-left-money">@0</div>
+			 		</div>
+			 	</div>
+			 </div>
+			 <div class="plr25">
+			<button class="button mt30 button-block  btn-red" on-tap="login()">马上赚钱</button>
+		</div>
 				</ion-content>
 			</ion-view>
 
