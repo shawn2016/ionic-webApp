@@ -16,17 +16,17 @@
 				$http.get(url)
 					.success(function(response) {
 						if (response.status.msg == "SUCCESS") {
-							publicFunc.showAlert("温馨提示", "发送成功");
+							publicFunc.showAlert("温馨提示", "发送成功","我知道了");
 
 						} else {
-							publicFunc.showAlert("温馨提示", response.status.msg);
+							publicFunc.showAlert("温馨提示", response.status.msg,"我知道了");
 						}
 					})
 					.error(function(response) {
 						$log.info(response);
 					});			
 		} else {
-			publicFunc.showAlert("温馨提示", "手机号格式不正确");
+			publicFunc.showAlert("温馨提示", "手机号格式不正确","我知道了");
 		}
 }
 		$scope.forgetPwd = function() {
@@ -36,10 +36,10 @@
 			$http.get(url)
 				.success(function(response) {
 						if (response.status.msg == "SUCCESS") {
-							publicFunc.showAlert("温馨提示", "修改成功");
+							publicFunc.showAlert("温馨提示", "修改成功","我知道了");
 							$location.path("/login").replace();
 						} else {
-							publicFunc.showAlert("温馨提示", response.status.msg);
+							publicFunc.showAlert("温馨提示", response.status.msg,"我知道了");
 						}
 				})
 				.error(function(response) {

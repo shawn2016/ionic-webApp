@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ 
+<title>jQuery中终止Ajax请求</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script src="http://common.cnblogs.com/script/jquery.js" type="text/javascript"></script>  
+<script>
+  var arrayAJAX = new Array();　
+  $(function(){
+ 
+     $("#btn").bind("click",function(){
+      for(var i=0;i<100;i++){
+           starAJAX(i);
+       }
+ 
+     });
+      
+     $("#bt2").bind("click",function(){
+ 
+       stopAJAX();
+       alert("终止AJAX请求");
+     });
+  })
+  function  stopAJAX()
+  {
+     for(var i=0;i<arrayAJAX.length;i++)
+     {
+         arrayAJAX[i].abort();
+     }
+     arrayAJAX = new Array();
+  }
+ 
+ function  starAJAX(i)
+  {
+        var options = {
+        url: '/Home/addallrecommandbook',
+        data: "html="+i,
+        success: function (data, textStatus) {
+            if (textStatus == 'success') {
+            alert("添加成功！");
+             
+            }
+            else {
+             
+            }
+        },
+        error: function (x, msg, err) {
+         
+        }
+        };
+        arrayAJAX.push($.ajax(options));
+  }
+   
+</script>
+ 
+</head>
+<body>
+<input type="button" id="btn" value="btn"/>
+<input type="button" id="bt2" value="stopAjax"/>
+</body>
+</html>

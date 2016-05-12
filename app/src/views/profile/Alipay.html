@@ -1,0 +1,31 @@
+<!--忘记密码-->
+
+<div class="bar bar-header bar-positive">
+	<a href="#/profile">
+		<button class="button button-icon ion-ios-arrow-left">
+        </button>
+	</a>
+	<h3 class="title">绑定支付宝</h3>
+
+
+
+        
+</div>
+<ion-view title="绑定支付宝" hide-nav-bar="true" class="bg" >
+      <ion-scroll class="has-header" ng-controller="Alipay_ctr">
+			<label class="item item-input">
+          <span class="input-label" >姓&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+          <div>{{alipay}}</div>
+
+        </label>
+        			<label class="item item-input">
+          <span class="input-label" >账户名</span>
+          <input type="text"  placeholder="请填写支付宝账户名"  ng-model="alipay_name" >
+        </label>
+        		
+        
+        <div class="plr25">
+			<button class="button mt30 button-block  btn-red" on-tap="updateAlipay()">确定</button>
+		</div>
+      </ion-scroll>
+    </ion-view>

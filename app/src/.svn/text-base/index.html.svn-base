@@ -37,6 +37,15 @@
 		    <script type="text/javascript" src="scripts/controller/gains/gainsSign_ctr.js"></script>
 		    <!--邀请-->
 		 <script type="text/javascript" src="scripts/controller/invite/invite_ctr.js"></script>
+		 
+		 <!--profile-->
+		 <script type="text/javascript" src="scripts/controller/profile/Alipay_ctr.js"></script>
+		 <script type="text/javascript" src="scripts/controller/profile/mailbox_ctr.js"></script>
+		 <script type="text/javascript" src="scripts/controller/profile/address_ctr.js"></script>
+		 
+		 <script type="text/javascript" src="scripts/controller/profile/identity_ctr.js"></script>
+		 
+		 
 	</body>
 
 </html>

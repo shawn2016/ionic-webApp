@@ -1,0 +1,29 @@
+ <!--忘记密码-->
+
+   <div class="bar bar-header bar-positive">
+ 	<a  ui-sref="profile({id: 1})">
+ 	        <button class="button button-icon ion-ios-arrow-left"  >
+        </button>
+        </a>
+      <h3 class="title">绑定邮箱</h3>
+    </div>
+    <ion-view view-title="绑定邮箱" class=" bg">
+	<ion-content class="pt10"  ng-controller="mailbox_ctr">
+
+					<div class="content has-header">
+						<div class="list">
+							<label class="item item-input">
+          <span class="input-label" >邮箱</span>
+          <input type="text"  placeholder="请输入邮箱"  ng-model="email" >
+        </label>
+				
+						</div>
+						<div class="plr10">
+							<button class="button  button-block  btn-red" on-tap="updateEmail()">确认</button>
+						</div>
+						
+					</div>			
+    </ion-content>
+</ion-view>
+
+   

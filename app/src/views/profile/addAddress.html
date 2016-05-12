@@ -1,0 +1,34 @@
+<!--忘记密码-->
+
+<div class="bar bar-header bar-positive">
+	<a href="#/address">
+		<button class="button button-icon ion-ios-arrow-left">
+        </button>
+	</a>
+	<h3 class="title">管理收货地址</h3>    
+</div>
+<ion-view title="管理收货地址" hide-nav-bar="true" class="bg" >
+      <ion-scroll class="has-header">
+      	<div ng-controller="address_ctr">
+			<label class="item item-input">
+          <span class="input-label" >收货人</span>
+          <input type="text"  placeholder="姓名"  ng-model="getname" >
+        </label>
+        			<label class="item item-input">
+          <span class="input-label" >手机号码</span>
+          <input type="text"  placeholder="11位手机号"  ng-model="telephone" >
+        </label>
+        		<!--<label class="item item-input">
+          <span class="input-label" >地区信息</span>
+          <input type="text"  placeholder="地区信息"  ng-model="telephone" >
+        </label>-->
+        <label class="item item-input">
+          <span class="input-label" >详细地址</span>
+          <input type="text"  placeholder="详细地址"  ng-model="address" >
+        </label>
+        <div class="plr25">
+			<button class="button mt30 button-block  btn-red" on-tap="addUserAddress()">保存</button>
+		</div>
+		</div>
+      </ion-scroll>
+    </ion-view>

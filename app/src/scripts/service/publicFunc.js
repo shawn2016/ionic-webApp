@@ -2,46 +2,52 @@
 myApp.service('publicFunc', ['$ionicPopup', '$timeout','$interval','$http', function($ionicPopup, $timeout,$interval,$http) {
 
 	/*  -----------alert 对话框   ------------*/
-	this.showAlert = function(title, template) {
+	this.showAlert = function(title, template,Save) {
 		var alertPopup = $ionicPopup.alert({
 			title: title,
-			template: template
+			template: template,
+				buttons: [{
+				text: '<b>'+Save+'</b>',
+				type: 'button-positive',
+				onTap: function(e) {
+				}
+			}]
 		});
 //		$timeout(function() {
 //			alertPopup.close(); // 3秒后关闭弹窗
 //		}, 3000);
-		alertPopup.then(function(res) {
-			console.log('Thank you for not eating my delicious ice cream cone');
-		});
+//		alertPopup.then(function(res) {
+//			console.log('Thank you for not eating my delicious ice cream cone');
+//		});
 	};
 	
 	/*  -----------confirm 对话框   ------------*/
-	this.showConfirm = function(title, template) {
+	this.showConfirm = function(title, template,Cancel,Save) {
 		var confirmPopup = $ionicPopup.confirm({
 			title: title,
-			template: template
+			template: template,
+			  cancelText: Cancel, // String (默认: 'Cancel')。一个取消按钮的文字。
+  cancelType: '', // String (默认: 'button-default')。取消按钮的类型。
+  okText: Save, // String (默认: 'OK')。OK按钮的文字。
+  okType: '', // String (默认: 'button-positive')。OK按钮的类型。
+
 		});
-		confirmPopup.then(function(res) {
-			if (res) {
-				console.log('You are sure');
-			} else {
-				console.log('You are not sure');
-			}
-		});
+	
+		return confirmPopup;
 	};
 	/*  -----------输入 对话框   ------------*/
-	this.showPopup = function() {
+	this.showPopup = function($scope,title,subTitle,Cancel,Save) {
 		$scope.data = {}
 			// 自定义弹窗
 		var myPopup = $ionicPopup.show({
-			template: '<input type="password" ng-model="data.wifi">',
-			title: 'Enter Wi-Fi Password',
-			subTitle: 'Please use normal things',
+//			template: '<input type="password" ng-model="data.wifi">',
+			title: title,
+			subTitle: subTitle,
 			scope: $scope,
 			buttons: [{
-				text: 'Cancel'
+				text: Cancel
 			}, {
-				text: '<b>Save</b>',
+				text: '<b>'+Save+'</b>',
 				type: 'button-positive',
 				onTap: function(e) {
 					if (!$scope.data.wifi) {
@@ -53,18 +59,27 @@ myApp.service('publicFunc', ['$ionicPopup', '$timeout','$interval','$http', func
 				}
 			}, ]
 		});
-		myPopup.then(function(res) {
-			console.log('Tapped!', res);
-		});
-		$timeout(function() {
-			myPopup.close(); // 3秒后关闭弹窗
-		}, 3000);
 	};
 	
+	//		myPopup.then(function(res) {
+//			console.log('Tapped!', res);
+//		});
+//		$timeout(function() {
+//			myPopup.close(); // 3秒后关闭弹窗
+//		}, 3000);
 		/*  -----------判断手机号格式   ------------*/
 	this.isMobile = function(str) {
 			var re = /^1\d{10}$/;
 			if (re.test(str)) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		/*  -----------判断邮箱格式   ------------*/
+	this.isemail = function(str) {
+			 var reg =  /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/;
+			if (reg.test(str)) {
 				return true;
 			} else {
 				return false;
@@ -123,5 +138,21 @@ var saveHttpList=[];
 				saveHttpList[0].abort();
 			}
 		saveHttpList=[];
-		}
+		};
+		
+			
+	/*  -----------confirm 对话框   ------------*/
+	this.paramsConfig = function(object) {
+//		console.log(object);
+//		object.HEADERS_RECEIVED=123;//你要添加的参数
+//		console.log(object);
+		
+	return object;
+	};
+		
+		
+		
+		
+		
+		
 }]);

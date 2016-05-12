@@ -86,6 +86,13 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 			templateUrl: "views/invite/invite_rule.html",
 
 		})
+		
+		
+		
+		
+		
+		
+		
 		//个人信息
 		.state('tabs.PIM', {
 			url: "/PIM",
@@ -97,7 +104,7 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 			}
 		})
 		.state('profile', {
-			url: "/profile",
+			url: "/profile{id}",
 			templateUrl: "views/profile/profile.html",
 
 		})
@@ -144,18 +151,62 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 			templateUrl: "views/profile/profileSetup.html",
 
 		})
-		//						帮助
+		//			设置-----帮助
 		.state('help', {
 			url: "/help",
 			templateUrl: "views/profile/help.html",
 
 		})
-//						意见反馈
+//					设置-----意见反馈	
 		.state('response', {
 			url: "/response",
 			templateUrl: "views/profile/response.html",
 
 		})
+		//					设置-----修改密码	
+		.state('ModifyPwd', {
+			url: "/ModifyPwd",
+			templateUrl: "views/profile/ModifyPwd.html",
+
+		})
+		//					设置-----密码管理	
+		.state('PasswordMng', {
+			url: "/PasswordMng",
+			templateUrl: "views/profile/PasswordMng.html",
+
+		})
+		//					设置-----身份认证	
+		.state('identity', {
+			url: "/identity",
+			templateUrl: "views/profile/identity.html",
+
+		})
+		//					设置-----支付宝	
+		.state('Alipay', {
+			url: "/Alipay",
+			templateUrl: "views/profile/Alipay.html",
+
+		})
+		//					设置-----收货地址	
+		.state('address', {
+			url: "/address",
+			templateUrl: "views/profile/address.html",
+
+		})
+			//					设置-----收货地址----添加、修改	
+		.state('addAddress', {
+			url: "/addAddress",
+			templateUrl: "views/profile/addAddress.html",
+
+		})
+		//					设置-----邮箱	
+		.state('mailbox', {
+			url: "/mailbox",
+			templateUrl: "views/profile/mailbox.html",
+
+		})
+		
+		
 	//listDemo
 	.state('listDemo', {
 		url: "/listDemo",

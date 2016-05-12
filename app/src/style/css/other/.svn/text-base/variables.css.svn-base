@@ -41,6 +41,12 @@
 .pt20 {
   padding-top: 20px !important;
 }
+.pt5l20 {
+  padding: 5px 20px !important;
+}
+.pt5l10 {
+  padding: 5px 10px !important;
+}
 .plr10 {
   padding: 0 10px !important;
 }
@@ -123,4 +129,7 @@
 }
 .width100 {
   width: 100%;
+}
+.relative {
+  position: relative;
 }

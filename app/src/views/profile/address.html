@@ -1,0 +1,47 @@
+<!--忘记密码-->
+
+<div class="bar bar-header bar-positive">
+	<a href="#/profile">
+		<button class="button button-icon ion-ios-arrow-left">
+        </button>
+	</a>
+	<h3 class="title">管理收货地址</h3>
+
+	<button class="button button-icon ion-plus" ui-sref="addAddress">
+        </button>
+
+        
+</div>
+
+<ion-view view-title="设置">
+	
+	<ion-content class="bg has-header"  ng-controller="address_ctr">
+		  <ion-refresher
+      pulling-text="释放刷新"
+      on-refresh="getUserAddress()">
+    </ion-refresher>
+		<div ><!--ng-show="isList"-->
+			
+			<div class="profile">
+				 <div class="white-bg">
+		<a class="item pt5l10 profile-list-border" style="min-height: 51px;"  ng-repeat="x in addressList">
+<div class="relative">
+	<div>
+<div class="userName">{{x.name}},{{x.telephone}}</div>
+<div class="address">{{x.address}}</div>
+</div>
+<i class="ion-android-remove-circle address-delete" on-tap="deleteUserAddress(x.id)"></i>
+</div>
+       </a>
+              </div>   
+      
+      
+        </div>
+		</div>
+			<div ng-show="isList">
+			
+			
+		</div>
+		
+	</ion-content>
+</ion-view>
