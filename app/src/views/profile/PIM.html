@@ -13,20 +13,20 @@
 
       <div class="list profile">
 
-        <a class="item item-icon-left item-frist" style="padding-left: 74px;" href="#">
+        <a class="item item-icon-left item-frist" style="padding-left: 74px;"  ui-sref="#">
           <i class="icon-logo icon-logo-a"></i>
                  帐号
-          <div>18500214323</div>
+          <div>{{$root.userInfo.moblie}}</div>
         </a>
  <div class="item-divider">         
         </div>
-        <a class="item item-icon-left" href="#/profile">
+        <a class="item item-icon-left"  ui-sref="profile">
           <i class="icon-logo icon-logo-b"></i>
           基本信息
         </a>
  <div class="item-divider">  
         </div>
-        <a class="item item-icon-left " href="#/profileMessage">
+        <a class="item item-icon-left "  ui-sref="profileMessage">
           <i class="icon-logo icon-logo-c"></i>
           最新消息
          
@@ -45,14 +45,14 @@
         </a>
         </div>-->
                 <div class="white-bg">
-       <a class="item item-icon-left profile-list-border pl44" href="#/profileCoupon">
+       <a class="item item-icon-left profile-list-border pl44"   ui-sref="profileCoupon">
           <i class="icon-logo icon-logo-f"></i>
           优惠券
 
         </a>
         </div>
         <div class="white-bg">
-<a class="item item-icon-left profile-list-border pl44" href="#/profileRecord">
+<a class="item item-icon-left profile-list-border pl44"  ui-sref="profileRecord">
           <i class="icon-logo icon-logo-g"></i>
           消费记录
 
@@ -61,20 +61,20 @@
         <div class="item-divider">  
         </div>
         
-       <a class="item item-icon-left" href="#/profileAdd">
+       <a class="item item-icon-left"  ui-sref="profileAdd">
           <i class="icon-logo icon-logo-h"></i>
           添加邀请人
 
        </a>
         <div class="item-divider">  
         </div>
-        <a class="item item-icon-left" href="#/profileHistory">
+        <a class="item item-icon-left"  ui-sref="profileHistory" >
           <i class="icon-logo icon-logo-i"></i>
               历史广告浏览
          
         </a>
         <div class="white-bg">
-        <a class="item item-icon-left profile-list-border pl44" href="#/profileInterest">
+        <a class="item item-icon-left profile-list-border pl44"  ui-sref="profileInterest">
           <i class="icon-logo icon-logo-j"></i>
           我感兴趣广告类型
         
@@ -82,7 +82,7 @@
        </div>
      <div class="item-divider">  
         </div>
-        <a class="item item-icon-left " href="#/profileSetup">
+        <a class="item item-icon-left "  ui-sref="profileSetup">
           <i class="icon-logo icon-logo-k"></i>
           设置
          

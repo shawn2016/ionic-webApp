@@ -1,70 +1,29 @@
-  <!--个人信息-->
+ <!--忘记密码-->
 
-    <div class="bar bar-header bar-positive">
-    	<a href="#/tab/PIM">
+   <div class="bar bar-header bar-positive">
+ 	<a  ui-sref="tabs.PIM">
  	        <button class="button button-icon ion-ios-arrow-left"  >
         </button>
         </a>
-	<h3 class="title">基本信息</h3>
-
-</div>
- <ion-view view-title="基本信息">
-	<ion-content class="bg">
-<div id="PIM">
-    <div class="content has-header ionic-pseudo">
-
-      <div class="list profile">
-
-        <a class="item pl20 item-frist" href="#" style="line-height: 40px;">
-                 头像
-          <img src="../src/images/head.png" class="right" width="40" height="40" alt="头像" />
-        </a>
- <div class="item-divider">         
-        </div>
-
-        <a class="item pl20 " href="#">
-          邮箱
-        </a>
-
-                <div class="white-bg">
-        <a class="item pl10 profile-list-border" href="#">
-
-          管理收货地址
-         
-        </a>
-        </div>
- <div class="item-divider">  
-        </div>
-        <a class="item pl20" href="#">
-
-          支付宝
-
-        </a>
-                        <div class="white-bg">
-<a class="item pl10 profile-list-border" href="#">
-
-          身份认证
-
-        </a>
-        </div>
-                        <div class="white-bg">
-       <a class="item pl10 profile-list-border" href="#">
-
-          资金密码管理
-
-        </a>
-                                <div class="white-bg">
-<a class="item pl10 profile-list-border" href="#">
-
-          修改登录密码
-
-       </a>   
-        </div>
-      </div>
-
+      <h3 class="title">添加邀请我的人</h3>
     </div>
-    </div>
-    	</ion-content>
+    <ion-view view-title="绑定邮箱" class=" bg">
+	<ion-content class="pt10"  ng-controller="identity_ctr">
+
+					<div class="content has-header">
+						<div class="list">
+							<label class="item item-input">
+          <span class="input-label" >邀请码</span>
+          <input type="text"  placeholder="请输入邀请人邀请码"  ng-model="$root.invite_code" >
+        </label>
+				
+						</div>
+						<div class="plr10">
+							<button class="button  button-block  btn-red" on-tap="addUserInvite()">确定</button>
+						</div>
+						
+					</div>			
+    </ion-content>
 </ion-view>
 
    

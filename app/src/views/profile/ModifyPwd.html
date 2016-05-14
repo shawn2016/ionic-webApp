@@ -9,21 +9,23 @@
     </div>
    <ion-view title="管理收货地址" hide-nav-bar="true">
       <ion-scroll class="has-header">
+      	<div ng-controller="address_ctr">
 			<label class="item item-input">
           <span class="input-label" >登录密码</span>
-          <input type="password"  placeholder="请输入登录密码"  ng-model="mobile" >
+          <input type="password"  placeholder="请输入登录密码"  ng-model="oldPassword" >
         </label>
         			<label class="item item-input">
           <span class="input-label" >新密码</span>
-          <input type="password"  placeholder="请输入新密码"  ng-model="mobile" >
+          <input type="password"  placeholder="请输入 6 - 16位字母，数字"  ng-model="newPassword" >
         </label>
         		<label class="item item-input">
           <span class="input-label" >确认密码</span>
-          <input type="password"  placeholder="请再次输入新登录密码"  ng-model="mobile" >
+          <input type="password"  placeholder="请再次输入新登录密码"  ng-model="newPasswordAgin" >
         </label>
       
         <div class="plr25">
-			<button class="button mt30 button-block  btn-red" on-tap="login()">保存</button>
+			<button class="button mt30 button-block  btn-red" on-tap="editPassword()">确定</button>
+		</div>
 		</div>
       </ion-scroll>
     </ion-view>

@@ -6,8 +6,12 @@
       var stories = [];
       $http.get('../src/data/item.json', {params: params})
         .success(function (response) {
+				$log.info(response);
+        	
           angular.forEach(response.data.children, function (child) {
             stories.push(child.data);
+
+            
           });
           callback(stories);
         });

@@ -1,0 +1,70 @@
+ <!--忘记密码-->
+
+   <div class="bar bar-header bar-positive">
+ 	<a ui-sref="gainsManage">
+ 	        <button class="button button-icon ion-ios-arrow-left"  >
+        </button>
+        </a>
+      <h3 class="title">转账信息</h3>
+    </div>
+   <ion-view title="转账信息" hide-nav-bar="true" class="bg" >
+      <ion-content class="has-header">
+      	<div ng-controller="gainsManage_ctr">
+			<label class="item item-input">
+          <span class="input-label" >类&nbsp;&nbsp;型</span>
+
+          <span>{{$root.getoutflowdesclist.sort}}<span>
+          
+        </label>
+        			<label class="item item-input">
+          <span class="input-label" >姓&nbsp;&nbsp;名</span>
+    
+          <input ng-show="$root.btnshow==2" type="text"  placeholder=""  ng-model="getoutflowdesclist.alipay_name" >
+            <span ng-hide="$root.btnshow==2">{{$root.getoutflowdesclist.alipay_name}}<span>
+        </label>
+        		<label class="item item-input">
+          <span class="input-label" >账户名</span>
+          <input ng-show="$root.btnshow==2" type="text"  placeholder=""   ng-model="getoutflowdesclist.alipay" >
+          
+          <span ng-hide="$root.btnshow==2">{{$root.getoutflowdesclist.alipay}}<span>
+          
+
+        </label>
+       <label class="item item-input">
+          <span class="input-label" >金&nbsp;&nbsp;额</span>         
+
+            <span >{{$root.getoutflowdesclist.amount}}<span>     
+        </label>
+        <div class="plr25" ng-show="$root.btnshow==2">
+			<button class="button mt30 button-block  btn-red" on-tap="updateuseroutflowtype()">确定</button>
+		</div>
+
+			<div class="rule">
+    	
+    		<div class="line-height">
+    		
+    		<span class="title-one-desc">
+    			转账过程中可能会出现以下几种问题:
+    		</span>
+    		</div>
+    			<div class="line-height">
+    	
+    		<span class="title-two-desc">
+    			1、账户异常
+    		</span><br />
+    		<span class="title-two-desc">
+    			2、支付宝账户信息不匹配
+    		</span><br />
+    		<span class="title-two-desc">
+    			发现问题后，我们会及时将你此次的转账冻结，请你检测账户状态或者支付宝姓名与账户名，如确认无误请重新提交
+    		</span><br />
+    	
+    		</div>    	
+    </div>
+
+		</div>
+		</div>
+      </ion-content>
+    </ion-view>
+
+   

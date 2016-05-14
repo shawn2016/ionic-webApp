@@ -16,7 +16,7 @@
 				账户余额
 			</div>
 			<div class="section-total-money">
-				    		{{income.income_current | currency : '￥'}}
+				    		{{$root.income.income_current | currency : '￥'}}
 			</div>
 			<div class="section-gains-two row">
 				<div class="col col-50 border-left">

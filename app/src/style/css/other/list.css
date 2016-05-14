@@ -1,0 +1,18 @@
+.list .item {
+  padding: 8px;
+  font-size: 14px;
+}
+.list .item-frist {
+  min-height: 60px;
+}
+.list .item-divider {
+  min-height: 10px;
+  padding: 0;
+}
+.list .item-icon-left {
+  padding-left: 54px;
+}
+.list .item-middle {
+  width: 90%;
+  margin: 0 auto;
+}

@@ -9,6 +9,8 @@ var gains_ctr = myApp.controller('gains_ctr', ['$scope', '$rootScope', '$log', '
 
 	//获取本地缓存数据
 	$rootScope.userInfo = ioniclocalStorage.getObject("userInfo");
+	
+
 	$log.info($rootScope.income);
 	// loading
 //	$ionicLoading.show({
@@ -19,19 +21,35 @@ var gains_ctr = myApp.controller('gains_ctr', ['$scope', '$rootScope', '$log', '
 //		showDelay: 0
 //	});
 	//1.加载收益情况
-	$scope.getGains = function() {
+	$scope.userIncome = function() {
+			//url需要传的参数
+			$scope.paramsList = {
+				token: $rootScope.userInfo.token,
+				uid: $rootScope.userInfo.uid,
 
-			var url = MyProvider.domain + "/user/userIncome.do?token=" + $rootScope.userInfo.token +
-				"&uid=" + $rootScope.userInfo.uid;
-			$log.info(url);
-			$http.get(url)
+			};
+			//方便在外部添加参数
+			var paramsList = publicFunc.paramsConfig($scope.paramsList);
+			$log.info(paramsList);
+			$http({
+					method: 'get',
+					params: paramsList,
+					//  data:{name:'john',age:27},
+					url: MyProvider.domain + "/user/userIncome.do",
+				})
+
+//			var url = MyProvider.domain + "/user/userIncome.do?token=" + $rootScope.userInfo.token +
+//				"&uid=" + $rootScope.userInfo.uid;
+//			$log.info(url);
+//			$http.get(url)
 				.success(function(response) {
 					if (response.status.msg == "SUCCESS") {
 						$rootScope.income = response.result;
-						ioniclocalStorage.setObject('gainsInfo',response.result ); 
+						
+						ioniclocalStorage.setObject('gainsInfo',response.result); 
 						$ionicLoading.hide();
 					} else {
-						publicFunc.showAlert("温馨提示", response.status.msg);
+						publicFunc.showAlert("温馨提示", response.status.msg,'我知道了');
 						$ionicLoading.hide();
 					}
 				})
@@ -44,12 +62,48 @@ var gains_ctr = myApp.controller('gains_ctr', ['$scope', '$rootScope', '$log', '
 				})
 
 		}
-		//下拉刷新
-	$scope.doRefresh = function() {
-		$scope.getGains();
-	};
-	
-	//2.是否设置支付宝
+	//2.获取一等奖红包中奖记录列表（红包版）
+	$scope.findWinrecordByPage = function() {
+			//url需要传的参数
+			$scope.paramsList = {
+				token: $rootScope.userInfo.token,
+				uid: $rootScope.userInfo.uid,
+				pageNumber: 1,
+				lastRecordId:10				
+			};
+			//方便在外部添加参数
+			var paramsList = publicFunc.paramsConfig($scope.paramsList);
+			$log.info(paramsList);
+			$http({
+					method: 'get',
+					params: paramsList,
+					//  data:{name:'john',age:27},
+					url: MyProvider.domain + "/user/findWinrecordByPage.do",
+			})
+				.success(function(response) {
+	                $log.info(response);
+					
+					if (response.status.msg == "SUCCESS") {
+						$rootScope.income = response.result;
+						ioniclocalStorage.setObject('gainsInfo',response.result); 
+						$ionicLoading.hide();
+					} else {
+						publicFunc.showAlert("温馨提示", response.status.msg,'我知道了');
+						$ionicLoading.hide();
+					}
+				})
+				.error(function(response) {
+		$ionicLoading.hide();
+		publicFunc.showAlert("温馨提示", "连接接服务器出错",'我知道了');
+					
+				})
+				.finally(function(response) {
+					$scope.$broadcast('scroll.refreshComplete');
+				})
+
+		}	
+
+	//3.是否设置支付宝
 $scope.alipayStatus = function() {		
 		//url需要传的参数
 	$scope.paramsList={
@@ -65,22 +119,36 @@ $http({
     url : MyProvider.domain+"/user/alipayStatus.do",
     })
 .success(function(response, status, headers, config){
+	$log.info("");
+	
 	$log.info(response);
 					if (response.status.msg == "SUCCESS") {						
 		$rootScope.isAlipayStatus=response.result.authentication;
 		ioniclocalStorage.setObject('isAlipayStatus',response.result.authentication ); 							
 					} else {
-						publicFunc.showAlert("温馨提示", response.status.msg);
+						publicFunc.showAlert("温馨提示", response.status.msg,'我知道了');
 					}
 	})
 	.error(function(response, status, headers, config){ 
-		publicFunc.showAlert("温馨提示", "连接接服务器出错");
+		publicFunc.showAlert("温馨提示", "连接接服务器出错",'我知道了');
 	});
 
 }
 	
 	
 	
-	$scope.alipayStatus();
-	$scope.getGains();
+			//finally --下拉刷新
+	$scope.doRefresh = function() {
+		$scope.userIncome();
+	};
+	
+
+	
+
+
+	$scope.userIncome();
+	//$scope.findWinrecordByPage();	
+
+    $scope.alipayStatus();
+    
 }])

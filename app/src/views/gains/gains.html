@@ -16,7 +16,7 @@
 				账户余额
 			</div>
 			<div class="section-total-money">
-				    		{{income.income_current | currency : '￥'}}
+				    		{{$root.income.income_current | currency : '￥'}}
 			</div>
 			<div class="section-gains-two row">
 				<div class="col col-50 border-left">
@@ -44,9 +44,8 @@
 					<div class="section-messages">
 						
 					</div>
-					<div class="section-messages-details">
+					<div class="section-messages-details" ui-sref="gainsMessage">
 						<marquee direction="up"  scrollamount="20"  bgcolor="#fff" scrolldelay="1000" width="100%" height="40">我在区域内滚动，向上哟。。。。</marquee>
-
 					</div>
 				</div>
 

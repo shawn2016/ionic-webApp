@@ -15,12 +15,12 @@
       <ion-scroll class="has-header" ng-controller="Alipay_ctr">
 			<label class="item item-input">
           <span class="input-label" >姓&nbsp;&nbsp;&nbsp;&nbsp;名</span>
-          <div>{{alipay}}</div>
+          <div>{{$root.userInfo.realname}}</div>
 
         </label>
         			<label class="item item-input">
           <span class="input-label" >账户名</span>
-          <input type="text"  placeholder="请填写支付宝账户名"  ng-model="alipay_name" >
+          <input type="text"  placeholder="请填写支付宝账户名"  ng-model="userInfo.alipay_name" >
         </label>
         		
         

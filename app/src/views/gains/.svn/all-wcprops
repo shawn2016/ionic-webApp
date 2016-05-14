@@ -13,13 +13,13 @@ gains.html
 K 25
 svn:wc:ra_dav:version-url
 V 63
-/svn/advertisement_h5/!svn/ver/2/app/src/views/gains/gains.html
+/svn/advertisement_h5/!svn/ver/5/app/src/views/gains/gains.html
 END
 gainsSign.html
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/svn/advertisement_h5/!svn/ver/3/app/src/views/gains/gainsSign.html
+/svn/advertisement_h5/!svn/ver/5/app/src/views/gains/gainsSign.html
 END
 gainsDetail.html
 K 25
@@ -31,5 +31,5 @@ gainsManage.html
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/svn/advertisement_h5/!svn/ver/3/app/src/views/gains/gainsManage.html
+/svn/advertisement_h5/!svn/ver/5/app/src/views/gains/gainsManage.html
 END

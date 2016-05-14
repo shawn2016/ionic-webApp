@@ -17,12 +17,7 @@ var gainsDetail_ctr = myApp.controller('gainsDetail_ctr', ['$scope', '$rootScope
 					var lineDataX = [];
 					for (var i = 0; i < $scope.lineData.length; i++) {
 						lineDataY.push($scope.lineData[i].amount_total);
-						
-					var sjdat=new Date($scope.lineData[i].ct);
-					var year=sjdat.getFullYear();
-           var month=sjdat.getMonth()+1;
-           var day=sjdat.getDate();
-           var dTime=year+'/'+month+'/'+day;
+						var dTime=publicFunc.getDateTime($scope.lineData[i].ct);					
 						lineDataX.push(dTime);
 					}
 $log.info(lineDataY);

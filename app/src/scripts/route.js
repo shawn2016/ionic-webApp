@@ -40,6 +40,20 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 			templateUrl: "views/gains/gainsManage.html",
 
 		})
+		//获奖消息
+		.state('gainsMessage', {
+			url: "/gainsMessage",
+			templateUrl: "views/gains/gainsMessage.html",
+
+		})
+		
+		
+			//资金管理
+		.state('gainsManageDesc', {
+			url: "/gainsManageDesc",
+			templateUrl: "views/gains/gainsManageDesc.html",
+
+		})
 		//收益明细
 		.state('gainsDetail', {
 			url: "/gainsDetail",
@@ -69,6 +83,28 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 				}
 			}
 		})
+		//广告-----欣赏
+	.state('advAppreciate', {
+			url: "/advAppreciate",
+			templateUrl: "views/adviertisement/advAppreciate.html",
+
+		})
+		//广告-----购买
+	.state('advBuy', {
+			url: "/advBuy",
+			templateUrl: "views/adviertisement/advBuy.html",
+
+		})
+		//广告-----详情
+	.state('advHelp', {
+			url: "/advHelp",
+			templateUrl: "views/adviertisement/advHelp.html",
+
+		})
+		
+	
+	
+	
 		//邀请
 		.state('tabs.invite', {
 			url: "/invite",
@@ -193,7 +229,13 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 			templateUrl: "views/profile/address.html",
 
 		})
-			//					设置-----收货地址----添加、修改	
+			//					设置-----收货地址---修改	
+		.state('addressDesc', {
+			url: "/addressDesc",
+			templateUrl: "views/profile/addressDesc.html",
+
+		})
+			//					设置-----收货地址----添加
 		.state('addAddress', {
 			url: "/addAddress",
 			templateUrl: "views/profile/addAddress.html",
@@ -213,5 +255,12 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 		templateUrl: "views/list/listDemo.html",
 		controller: 'listDemo_ctr'
 	})
+		//				优惠
+
+	.state('demo', {
+			url: "/demo",
+			templateUrl: "views/adviertisement/demo.html",
+
+		})
 	$urlRouterProvider.otherwise("/login");
 })

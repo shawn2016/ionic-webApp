@@ -48,7 +48,7 @@
     .section-item {
         position: relative;
         &:active {
-            background-color: @primary-bg-color;
+            background-color: @border-color;
         }
         .section-title {
             padding: 10px 0;
@@ -58,23 +58,18 @@
             height: 30px;
             margin: 0 auto;
             background: url("../../images/icon@2x.png") center center no-repeat;
-            //  background-size: 350px 114px;
             background-size: 175px 57px;
         }
         #gains-manage {
-            //background-position: -0px -54px;
             background-position: -0px -27px;
         }
         #gains-detail {
-            //background-position: -77px -27px;
             background-position: -37px -27px;
         }
         #gains-Sign {
-            //  background-position: -156px -27px;
             background-position: -77px -27px;
         }
         #gains-Collection {
-            //      background-position: -239px -27px;
             background-position: -118px -27px;
         }
     }
@@ -117,6 +112,46 @@
             padding: 5px;
             margin: 0 3px;
         }
+    }
+}
+//record-list
+
+.record-list{
+    padding: 10px 20px;
+    .record-list-title{
+        color: ;
+    }
+    .record-list-desc{
+            padding: 0px 0px 0px 10px;
+    border-bottom: 1px solid @primary-text--grey-color-half;
+    
+    &:active{
+        background-color:@border-color ;
+    }
+     .record-title{
+        color: @primary-text--grey-color;
+        font-size: 14px;
+    }
+    .record-time{
+        color: @primary-text--grey-color-half;
+        font-size: 12px;
+    }
+    .list-status{
+        .fail{
+            color: red;
+        }
+        .success{
+            color: green;
+        }
+        .ing{
+            color: orange;           
+        }
+    }
+    }
+    .border-top1{
+    border-top: 1px solid @primary-text--grey-color-half !important;
+    border-bottom: transparent !important;
+        
     }
 }
 //rule
@@ -312,13 +347,14 @@
     color: @primary-text--grey-color-half;
 }
 .address-delete{
- 
-       position: absolute;
+     position: absolute;
     font-size: 20px;
     right: -10px;
-    top: 10px;
-    color: @primary-text-bule-color;
-
+    z-index: 10;
+    width: 50px;
+    height: 30px;
+    top: 15px;
+    color: @primary-text-bule-color;     
 }
 }
 //adviertisement
@@ -424,4 +460,84 @@
 .mailbox-email{
     color:@primary-text--grey-color-half;
     
+}
+//list
+
+.gains-list-top-other{
+        position: absolute;
+    width: 100%;
+    height: 190px;
+    top: 44px;
+    z-index: 10;
+
+}
+.record-list{
+     margin-top: 190px ;
+}
+.loadEnd{
+        text-align: center;
+    font-size: 14px;
+    color: @primary-text--grey-color-half;
+    padding: 15px;
+    a{
+        font-size: 12px;
+        color: @primary-text-bule-color;
+    }
+}
+//adv
+.adv-imgBox{
+    img{
+        width: 100%;
+        height: 180px;
+    }
+   video{
+        width: 100%;
+       
+   }
+}
+.adv-panel-box{
+    margin: 15px;
+    .card-panel{
+        padding: 15px;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 2px;
+    background-color: #fff;
+        -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    .title{
+        text-align: center;
+        .title-l{
+    font-size: 14px;
+            
+        }
+         .title-r{
+                color: @primary-text-bule-color;
+    font-size: 18px;
+        }
+      
+    }
+      .subtitle{
+            text-align: center;
+            font-size: 14px;
+                   margin: 15px 0 5px;
+
+        }
+        .desc{
+                text-align: center;
+             font-size: 14px;
+                 padding: 3px;
+            .items{
+                color: @primary-text--grey-color-half
+            }
+            .money{
+                color: @primary-text-bule-color;
+            }
+            .count{
+                color: @primary-text-bule-color;
+                
+            }
+      
+        }
+    }
 }

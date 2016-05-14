@@ -3,45 +3,68 @@
 <div class="bar bar-header bar-positive">
 	<h3 class="title">广告列表</h3>
 </div>
+<div ng-controller="adviertisement_ctr">
 <div class="adviertisement mt44">
-	<div class="section-total-money-sm">条纹样式选项卡</div>
+	<div class="section-total-money-sm">
+今天奖金总金额:
+						{{$root.totalmoney | currency : '￥'}}
+		
+	</div>
 
 	<div class="tabs-striped tabs-top  tabs-color-light">
 		<div class="tabs">
-			<a class="tab-item" href="#">
+			<!--<a class="tab-item"  ng-class="{true: 'active', false: ''}[time=='shangwu']"  ng-tap="changetime('shangwu')">
 
-          测试
+          上午
         </a>
-			<a class="tab-item" href="#">
+			<a class="tab-item"  ng-class="{true: 'active', false: ''}[time=='xiawu']"  ng-tap="changetime('xiawu')">
 
-          收藏
+          下午
         </a>
-			<a class="tab-item active" href="#">
+			<a class="tab-item" ng-class="{true: 'active', false: ''}[time=='wanshang']" ng-tap="changetime('wanshang')">
 
-          设置
-        </a>
+          晚上
+        </a>-->
+        	<div class="plr25">
+			<button class="button mt30 button-block  btn-red" on-tap="changetime('shangwu')">上午</button>
+		</div>
+        	<div class="plr25">
+			<button class="button mt30 button-block  btn-red" on-tap="changetime('xiawu')">下午</button>
+		</div>
+        	<div class="plr25">
+			<button class="button mt30 button-block  btn-red" on-tap="changetime('wanshang')">晚上</button>
+		</div>
+
 		</div>
 	</div>
 </div>
 
 <ion-view view-title="广告列表">
 	<ion-content class="has-header bg mt70">
-		<div class="img-list">
-			<div class="img-box">
-				<img src="../src/images/sign2.png" alt="" />
+		<div class="img-list" ng-repeat="x in advlist">
+			<div class="img-box" ng-click="getenjoyadvdata(x.id,x.advControlId,x.advId)" ng-if="x.startTime>=nowtime&&x.startTime<=nowTotime">
+				<img src="http://advred.image.alimmdn.com{{x.advPicSmall}}" alt="" />
 				<div class="img-title-box">
 					<span class="img-title-box-left">
-					5555555
+					{{x.advTitle }}
 					</span>
-					<span class="img-title-box-right">
-					5555555
+					<span class="img-title-box-right">					
+						{{x.advControlTotalMoney | currency : '￥'}}
+						<i class="ion-social-youtube-outline"></i>
 					</span>
 				</div>
 				<div class="img-status">
-					被
+			    <div ng-if='x.isright==0'>未答</div>
+				<div ng-if='x.isright==1'>正确</div>
+				<div ng-if='x.isright==2'>错误</div>
+				<div ng-if='x.isright==3'>过期</div>
+				<div ng-if='x.isright==4'>被抢</div>
+
+
 				</div>
 			</div>
 
 		</div>
 	</ion-content>
 </ion-view>
+</div>

@@ -23,25 +23,25 @@
 		<div ><!--ng-show="isList"-->
 			
 			<div class="profile">
-				 <div class="white-bg">
-		<a class="item pt5l10 profile-list-border" style="min-height: 51px;"  ng-repeat="x in addressList">
-<div class="relative">
+				 <div class="white-bg relative" ng-repeat="x in addressList">
+		<a class="item pt5l10 profile-list-border" style="min-height: 51px;" on-tap="getUpdate(x.id,x.name,x.telephone,x.address)">
+<div>
 	<div>
 <div class="userName">{{x.name}},{{x.telephone}}</div>
-<div class="address">{{x.address}}</div>
+<div class="address" title="x.address">
+	{{x.address.length>20? ((x.address | limitTo:20)+"...") :x.address }}
 </div>
-<i class="ion-android-remove-circle address-delete" on-tap="deleteUserAddress(x.id)"></i>
+</div>
+
 </div>
        </a>
+       <i class="ion-android-remove-circle address-delete" on-tap="deleteUserAddress(x.id)"></i>
               </div>   
       
       
         </div>
 		</div>
-			<div ng-show="isList">
 			
-			
-		</div>
 		
 	</ion-content>
 </ion-view>

@@ -72,6 +72,36 @@ $http({
 		publicFunc.showAlert("温馨提示", "连接接服务器出错",'我知道了');
 	});
 }
+//3.设置邀请人
+$scope.addUserInvite = function() {		
+		//url需要传的参数
+	$scope.paramsList={
+		token: $rootScope.userInfo.token,
+		uid:$rootScope.userInfo.uid,
+		invite_code:$rootScope.invite_code,
+		
+	};
+	//方便在外部添加参数
+	var paramsList=	publicFunc.paramsConfig($scope.paramsList);
+$http({
+	method : 'get',
+    params : paramsList,
+//  data:{name:'john',age:27},
+    url : MyProvider.domain+"/user/addUserInvite.do",
+    })
+.success(function(response, status, headers, config){
+	$log.info(response);
+					if (response.status.msg == "SUCCESS") {
+
+					
+					} else {
+						publicFunc.showAlert("温馨提示", response.status.msg,'我知道了');
+					}
+	})
+	.error(function(response, status, headers, config){ 
+		publicFunc.showAlert("温馨提示", "连接接服务器出错",'我知道了');
+	});
+}
 $scope.getUserIdCardAuthMsg();
 
 	}])

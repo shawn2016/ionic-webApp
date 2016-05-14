@@ -27,11 +27,19 @@
 			<!--<div class="section sing-img">
 		<img src="../src/images/sign.png" alt="" />
 		</div>-->
-		<div class="section-sign">
-			你已经签到<span class="numer">3</span>天，上次签到时间<span class="numer">2016.03.08</span>
+			<div class="section-sign" ng-show="getuserCheckInLength==0">
+			
+			你还没有签到过！
+		</div>
+		<div class="section-sign" ng-hide="getuserCheckInLength==0">
+			
+			你已经签到<span class="numer">{{getuserCheckInLength}}</span>天，上次签到时间<span class="numer">
+				
+				{{last_check_in_time | date : 'yyyy.MM.dd'}}
+			</span>
 		</div>
 			 <div class="plr25">
-			<button class="button mt30 button-block  btn-red" on-tap="login()">立即签到</button>
+			<button class="button mt30 button-block  btn-red" on-tap="updateUserCheckIn()" ng-disabled="check_inStatus=='今日已签到'">{{check_inStatus}}</button>
 		</div>
 			<div class="section-sign-rule">
 			<p>签到规则</p>

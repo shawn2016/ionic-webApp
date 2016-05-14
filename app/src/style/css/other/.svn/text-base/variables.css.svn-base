@@ -26,6 +26,9 @@
 /*bar-color*/
 /*footer-color*/
 /*black-color*/
+.p0 {
+  padding: 0px !important;
+}
 .p20 {
   padding: 20px !important;
 }

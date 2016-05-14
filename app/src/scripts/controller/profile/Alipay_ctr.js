@@ -10,8 +10,8 @@ var Alipay_ctr = myApp.controller('Alipay_ctr', ['$scope', '$rootScope', '$log',
 					$scope.paramsList = {
 						token: $rootScope.userInfo.token,
 						uid: $rootScope.userInfo.uid,
-						alipay: $scope.alipay,
-						alipay_name: $scope.alipay_name
+						alipay: $rootScope.userInfo.alipay,
+						alipay_name: $rootScope.userInfo.alipay_name
 					};
 					//方便在外部添加参数
 					var paramsList = publicFunc.paramsConfig($scope.paramsList);
@@ -26,7 +26,7 @@ var Alipay_ctr = myApp.controller('Alipay_ctr', ['$scope', '$rootScope', '$log',
 							$log.info(response);
 							if (response.status.msg == "SUCCESS") {
 								publicFunc.showAlert("温馨提示", '信息保存成功','我知道了');
-								$location.path("/profile").replace();
+							//	$location.path("/profile").replace();
 								
 							
 							} else {

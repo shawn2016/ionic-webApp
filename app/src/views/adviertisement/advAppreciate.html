@@ -1,0 +1,97 @@
+ <!--资金管理-->
+<div ng-controller="adviertisement_ctr">
+   <div class="bar bar-header bar-positive">
+ 	<a ui-sref="tabs.adviertisement">
+ 	        <button class="button button-icon ion-ios-arrow-left"  >
+        </button>
+        </a>
+      <h3 class="title">{{$root.advlistdesc.title}}</h3>
+    </div>
+<ion-view view-title={{$root.advlistdesc.title}} class="white-bg">
+				<ion-content class="has-header" >
+		<div class="adv-imgBox">
+	
+			<img src="http://advred.image.alimmdn.com{{$root.advlistdesc.picsmall}}" />
+			<!--<video   ng-if="$root.advlistdesc.advtype==1" controls>
+  <source src="http://advred.image.alimmdn.com{{$root.advlistdesc.picsmall}}" >
+
+  您的浏览器不支持 HTML5 video 标签。
+</video>-->
+		</div>
+		<div class="adv-panel-box">
+			<div class="card-panel">
+				<div class="title">
+					<span class="title-l">
+					派送奖金:
+				</span>
+				<span class="title-r">
+					
+						{{$root.advlistdesc.goldpooltotal | currency : '￥'}}
+				</span>
+				</div>
+				<div class="subtitle">
+					红包总数
+				</div>
+				<div class="desc">
+					<div class="row">
+						<div class="col col-40">
+								<div class="items">
+						一等红包:
+					</div>	
+						<div class="items">
+						二等红包:
+					</div>	
+						<div class="items">
+						三等红包:
+					</div>	
+						</div>
+						<div class="col col-30 text-left">
+							<div class="count">
+						{{$root.advlistdesc.singlefirstprizemoney | currency : '￥'}}
+
+						</div>
+							<div class="money">
+						{{$root.advlistdesc.singlesecondprizemoney | currency : '￥'}}
+							
+						</div>
+
+							<div class="money">
+						{{$root.advlistdesc.singlethirdprizemoney | currency : '￥'}}
+							
+						</div>
+
+						</div>
+						<div class="col col-30 text-left">
+							<div class="count">
+							
+						{{$root.advlistdesc.totalfirstprizenumber }}
+							个
+						</div>
+							<div class="count">
+						{{$root.advlistdesc.totalsecondprizenumber }}
+							个
+						</div>
+							<div class="count">
+						{{$root.advlistdesc.totalthirdprizenumber }}
+							个
+						</div>
+						</div>
+					</div>
+					<div >
+				
+					
+					</div>
+					
+				</div>
+					
+				
+			</div>
+		</div>
+			<div class="plr25">
+			<button class="button mt30 button-block  btn-red" on-tap="login()">欣赏广告</button>
+		</div>
+
+				</ion-content>
+			</ion-view>
+
+   </div>

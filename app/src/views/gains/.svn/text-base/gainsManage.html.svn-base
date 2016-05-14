@@ -7,28 +7,61 @@
         </a>
       <h3 class="title">资金管理</h3>
     </div>
-<ion-view view-title="资金管理" class="bg">
-				<ion-content class="has-header" ng-controller="gainsManage_ctr">
+		<ion-view view-title="资金管理" class="bg">
+			<div  ng-controller="gainsManage_ctr">
+				
+		<div class="gains-list-top-other">
 				<div class="section">
 			<div class="section-title">
 				账户余额
 			</div>
 			<div class="section-total-money bt0">
-				  {{income.income_current | currency : '￥'}}
+				    		{{$root.income.income_current | currency : '￥'}}
+
 			</div>
 	
 		</div>
-			<div class="plr25">
+			<div class="plr25 bg">
 
 			 <button  class="button mt30 button-outline width100 button-positive"  on-tap="login()">转出</button>
 		</div>
+</div>
+	<ion-content class="has-header" scrollbar-y="false">
 		<div class="record-list">
-			<div class="record-list-title">
+			   <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="loadNewerStories()">
+    </ion-refresher>
+			<div class="record-list-title bt1">
 				转账记录
+			</div>
+			<div class="record-list-desc" ng-repeat="x in histAccountOutAndInflowList"> 
+				<div class="row"  on-tap="getoutflowdesc(x.id,x.type)">
+				<div class="col col-80 p0 text-left">
+				<div class="record-title">{{x.alipay}}</div>
+				<div class="record-time">
+					{{x.ct | date : 'yyyy-MM-dd hh:mm:ss'}}
+				</div>
+				</div>
+			    <div class="col col-20 p0 list-status text-right">
+			    	<div ng-class="{1: 'success', 2: 'fail', 3: 'ing', 0: 'ing'}[x.type]" >
+				<div>{{x.amount | currency : '￥'}}</div>
+				<div ng-if='x.type==0||x.type==3'>处理中</div>
+				<div ng-if='x.type==2'>失败</div>
+				<div ng-if='x.type==1'>成功</div>
+				</div>
+				</div>
+				</div>
 			</div>
 			
 		</div>
+		
+      <ion-infinite-scroll
+      on-infinite="loadOlderStories()"
+      distance="1%">
+    </ion-infinite-scroll>
 				</ion-content>
+					</div>
 			</ion-view>
 
    

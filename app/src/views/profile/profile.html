@@ -1,7 +1,7 @@
   <!--个人信息-->
 
     <div class="bar bar-header bar-positive">
-    	<a href="#/tab/PIM">
+    	<a  ui-sref="tabs.PIM">
  	        <button class="button button-icon ion-ios-arrow-left"  >
         </button>
         </a>
@@ -22,39 +22,39 @@
  <div class="item-divider">         
         </div>
 
-        <a class="item pl20 " href="#/mailbox">
+        <a class="item pl20 "  ui-sref="mailbox">
           邮箱
-          <span class="mailbox-email right">{{email}}</span>
+          <span class="mailbox-email right">{{$root.userInfo.email}}</span>
         </a>
 
                 <div class="white-bg">
-        <a class="item pl10 profile-list-border" href="#/address">
+        <a class="item pl10 profile-list-border"  ui-sref="address">
           管理收货地址
          
         </a>
         </div>
  <div class="item-divider">  
         </div>
-        <a class="item pl20" href="#/Alipay">
+        <a class="item pl20"   ui-sref="Alipay">
 
           支付宝
 
         </a>
                         <div class="white-bg">
-<a class="item pl10 profile-list-border" href="#/identity">
+<a class="item pl10 profile-list-border"   ui-sref="identity">
 
           身份认证
 
         </a>
         </div>
                         <div class="white-bg">
-       <a class="item pl10 profile-list-border" href="#/PasswordMng">
+       <a class="item pl10 profile-list-border"   ui-sref="PasswordMng">
 
           资金密码管理
 
         </a>
                                 <div class="white-bg">
-<a class="item pl10 profile-list-border" href="#/ModifyPwd">
+<a class="item pl10 profile-list-border"   ui-sref="ModifyPwd">
 
           修改登录密码
 

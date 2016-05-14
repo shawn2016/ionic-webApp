@@ -40,6 +40,12 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 			templateUrl: "views/gains/gainsManage.html",
 
 		})
+			//资金管理
+		.state('gainsManageDesc', {
+			url: "/gainsManageDesc",
+			templateUrl: "views/gains/gainsManageDesc.html",
+
+		})
 		//收益明细
 		.state('gainsDetail', {
 			url: "/gainsDetail",
@@ -193,7 +199,13 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 			templateUrl: "views/profile/address.html",
 
 		})
-			//					设置-----收货地址----添加、修改	
+			//					设置-----收货地址---修改	
+		.state('addressDesc', {
+			url: "/addressDesc",
+			templateUrl: "views/profile/addressDesc.html",
+
+		})
+			//					设置-----收货地址----添加
 		.state('addAddress', {
 			url: "/addAddress",
 			templateUrl: "views/profile/addAddress.html",

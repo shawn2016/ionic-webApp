@@ -1,0 +1,46 @@
+ <!--资金管理-->
+
+   <div class="bar bar-header bar-positive">
+ 	<a ui-sref="tabs.gains">
+ 	        <button class="button button-icon ion-ios-arrow-left"  >
+        </button>
+        </a>
+      <h3 class="title">一等奖列表页</h3>
+    </div>
+<ion-view view-title="一等奖列表页" class="bg">
+	<ion-content class="has-header" >
+		<div ng-controller="gainsSign_ctr">
+		<div class="record-list" style="margin-top: 0;">
+			   <ion-refresher
+      pulling-text="释放刷新..."  
+      on-refresh="loadNewerStories()">
+    </ion-refresher>
+
+			<div class="record-list-desc border-top1" ng-repeat="x in stories" > 
+				<div class="row"  on-tap="getoutflowdesc(x.id,x.type)">
+				<div class="col col-60 p0 text-left">
+				<div class="record-title">{{x.user_mobile}}</div>
+				
+				</div>
+			    <div class="col col-30 p0 list-status text-right">
+			    	<div class="fail" >
+				<div>{{x.money | currency : '￥'}}</div>
+				
+				</div>
+				</div>
+				</div>
+			</div>
+
+		</div>
+
+		  <!--<button ng-click="scrollTop()" ng-show="">滚动到顶部!</button>-->
+		  <div class="loadEnd">没有更多数据了！<a  ng-click="scrollTop()" ng-if="listEnd">回到顶部</a></div>
+      <ion-infinite-scroll ng-if="listEnd==true"  icon="ion-loading-c" 
+      on-infinite="loadOlderStories()"
+      distance="1%">
+    </ion-infinite-scroll>
+    </div>
+				</ion-content>
+			</ion-view>
+
+   

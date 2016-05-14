@@ -20,8 +20,8 @@
 							<button class="button  button-block  btn-red" on-tap="login()">登录</button>
 						</div>
 						<div class="plr10">
-							<a href="#/forgetPwd">忘记密码?</a>
-							<a href="#/register" style="float: right;">注册</a>
+							<a  ui-sref="forgetPwd">忘记密码?</a>
+							<a  class="right" ui-sref="register" >注册</a>
 						</div>
 					</div>			
     </ion-content>

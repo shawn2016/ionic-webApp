@@ -16,9 +16,9 @@ myApp.service('publicFunc', ['$ionicPopup', '$timeout','$interval','$http', func
 //		$timeout(function() {
 //			alertPopup.close(); // 3秒后关闭弹窗
 //		}, 3000);
-//		alertPopup.then(function(res) {
-//			console.log('Thank you for not eating my delicious ice cream cone');
-//		});
+
+		return alertPopup;
+		
 	};
 	
 	/*  -----------confirm 对话框   ------------*/
@@ -96,6 +96,18 @@ myApp.service('publicFunc', ['$ionicPopup', '$timeout','$interval','$http', func
 			return false;
 		}
 	};
+				/*  -----------支付密码 只能是6位  ------------*/
+		//
+	this.iszhifupassword = function(str) {
+		var re = /^[a-zA-Z0-9]{6,6}$/;
+
+		if (re.test(str)) {
+			return true;
+		} else {
+			return false;
+		}
+	};
+
 	
 				/*  -----------短信验证等待60秒   ------------*/
 this.setTime60=function($scope){
@@ -125,6 +137,18 @@ this.setTime60=function($scope){
         },1000,100);
         return this;
 }
+
+				/*  -----------长整型转时间格式   ------------*/
+this.getDateTime=function(str){
+  	var sjdat=new Date(str);
+	var year=sjdat.getFullYear();
+   var month=sjdat.getMonth()+1;
+   var day=sjdat.getDate();
+   var dTime=year+'.'+month+'.'+day;
+   return dTime;
+}
+
+
 
 var saveHttpList=[];
 	this.addHttp=function(name) {

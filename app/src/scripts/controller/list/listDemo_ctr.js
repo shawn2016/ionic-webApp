@@ -6,8 +6,12 @@
       var stories = [];
       $http.get('../src/data/item.json', {params: params})
         .success(function (response) {
+				$log.info(response);
+        	
           angular.forEach(response.data.children, function (child) {
             stories.push(child.data);
+
+            
           });
           callback(stories);
         });
@@ -31,6 +35,8 @@
       params['before'] = $scope.stories[0].name;
       loadStories(params, function (newerStories) {
         $scope.stories = newerStories.concat($scope.stories);
+				$log.info($scope.stories.length);
+        
         $scope.$broadcast('scroll.refreshComplete');
       });
     }
