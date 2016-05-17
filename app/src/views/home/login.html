@@ -24,7 +24,17 @@
 							<a  ui-sref="forgetPwd">忘记密码?</a>
 							<a  class="right" ui-sref="register" >注册</a>
 						</div>
-					</div>			
+					</div>	
+					<ionic-city-picker options='vm.CityPickData1'></ionic-city-picker>
+<ionic-city-picker options='vm.CityPickData2'></ionic-city-picker>
+<ionic-city-picker options='vm.CityPickData3'></ionic-city-picker>
+<ionic-city-picker options='vm.CityPickData4'></ionic-city-picker>
+<div class="button button-positive button-block" ng-click="vm.change()">
+  修改城市
+</div>
+<div class="button button-positive button-block" ng-click="vm.sync()">
+  同步{{vm.CityPickData2.areaData}}
+</div>
     </ion-content>
   </ion-view>
 

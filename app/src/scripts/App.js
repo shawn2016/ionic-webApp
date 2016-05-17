@@ -1,4 +1,4 @@
-var myApp = angular.module('ionicApp', ['ionic','ionic-datepicker','ionic-timepicker','ionic-ratings','ionic-toast'])
+var myApp = angular.module('ionicApp', ['ionic','ionic-datepicker','ionic-timepicker','ionic-ratings','ionic-toast','ionic-citypicker'])
    myApp.run(function($ionicPlatform) {
         $ionicPlatform.ready(function() {
           // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
