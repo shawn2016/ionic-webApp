@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset=UTF-8>
+<title>学了又学</title>
+<style type="text/css">
+</style>
+<script src="http://cdn.bootcss.com/jquery/2.2.3/jquery.js"></script>
+
+<script type="text/javascript">
+    $ (function ()
+    {
+        // 初始化的时候判断
+        // funny ();
+         
+        var txt = $ (":text");
+        $ (":button").click (function ()
+        {
+            funny (txt.val ());
+        })
+    });
+     
+    // 这个方法在你点击查询按钮后，动态改变
+    var funny = function (row)
+    {
+        if (row >= 0)
+        {
+            $ ("table tr:eq(" + row + ") td:not(:empty)").css ("backgroundColor", "red");
+        }
+        else
+        {
+            $ ("table tr td:not(:empty)").css ("backgroundColor", "red");
+        }
+    }
+</script>
+</head>
+<body>
+    <!-- 输入某行测试 -->
+    <input type="text" />
+    <button>check</button>
+    <table>
+        <tr>
+            <th>xxx</th>
+        </tr>
+        <tr>
+            <td>111</td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td>222</td>
+        </tr>
+    </table>
+</body>
+</html>

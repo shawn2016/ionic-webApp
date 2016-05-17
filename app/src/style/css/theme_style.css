@@ -570,16 +570,22 @@ a {
   background-position: -180px 0px;
 }
 .profile .item {
+  padding: 0;
   border-color: transparent !important;
 }
-.profile .profile-list-border {
+.profile .item .border-90 {
+  padding: 8px 0px 8px 14px;
+  border-bottom: 1px solid #d8d8d8;
   margin: 0 10px;
-  border: transparent;
-  border-top: 1px solid;
-  border-color: #d8d8d8 !important;
 }
-.profile .profile-list-border .icon-logo {
-  left: 15px;
+.profile .item .border-100 {
+  padding: 8px 0px 8px 24px;
+}
+.profile .item .pl54 {
+  padding-left: 54px;
+}
+.profile .item .pl44 {
+  padding-left: 44px;
 }
 .profile .couponMoney {
   padding-right: 10px;

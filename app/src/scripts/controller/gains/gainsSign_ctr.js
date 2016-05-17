@@ -1,10 +1,27 @@
 //收益
 
 var gainsSign_ctr = myApp.controller('gainsSign_ctr', ['$scope', '$rootScope', '$log', '$timeout', '$http', '$location', 'MyProvider', 'publicFunc', 'ioniclocalStorage', '$ionicLoading','$ionicScrollDelegate', function($scope, $rootScope, $log, $timeout, $http, $location, MyProvider, publicFunc, ioniclocalStorage, $ionicLoading,$ionicScrollDelegate) {
-	
-	$scope.myActiveSlide = 1;
+		    		$scope.myActiveSlide = 1;
+
 	$scope.check_inStatus="立即签到";
-	
+
+ var inplen=document.querySelectorAll('ion-slide[ion-slide]');
+
+$log.info(inplen); 	
+//	$scope.loading =function(){
+//	$timeout(
+//	    function() {
+//        if($scope.myActiveSlide == min){
+//        	$scope.myActiveSlide =$scope.myActiveSlide +1;
+//        }else if($scope.myActiveSlide == max){
+//                  	$scope.myActiveSlide =$scope.myActiveSlide -1;
+//        }
+//		$scope.loading();
+//	    },
+//	    3000
+//	);
+//}
+//	$scope.loading();
 	//获取本地缓存数据
 	$rootScope.userInfo = ioniclocalStorage.getObject("userInfo");
 	$log.info($rootScope.income);

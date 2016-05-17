@@ -15,49 +15,52 @@
 
       <div class="list profile">
 
-        <a class="item pl20 item-frist" href="#" style="line-height: 40px;">
+        <a class="item  item-frist" href="#" style="line-height: 40px;">
                  头像
           <img src="../src/images/head.png" class="right" width="40" height="40" alt="头像" />
         </a>
  <div class="item-divider">         
         </div>
 
-        <a class="item pl20 "  ui-sref="mailbox">
+        <a class="item  "  ui-sref="mailbox">
+        	<div class="border-90">
           邮箱
           <span class="mailbox-email right">{{$root.userInfo.email}}</span>
+        </div>
         </a>
 
-                <div class="white-bg">
-        <a class="item pl10 profile-list-border"  ui-sref="address">
+                
+        <a class="item  "  ui-sref="address">
+        	        	<div class="border-100">
           管理收货地址
-         
+          </div>
         </a>
-        </div>
+       
  <div class="item-divider">  
         </div>
-        <a class="item pl20"   ui-sref="Alipay">
-
+        <a class="item "   ui-sref="Alipay">
+        	        	<div class="border-90">
           支付宝
-
+</div>
         </a>
-                        <div class="white-bg">
-<a class="item pl10 profile-list-border"   ui-sref="identity">
-
+                        
+<a class="item  "   ui-sref="identity">
+        	        	<div class="border-90">
           身份认证
-
-        </a>
         </div>
-                        <div class="white-bg">
-       <a class="item pl10 profile-list-border"   ui-sref="PasswordMng">
-
-          资金密码管理
-
         </a>
-                                <div class="white-bg">
-<a class="item pl10 profile-list-border"   ui-sref="ModifyPwd">
 
+                        
+       <a class="item  "   ui-sref="PasswordMng">
+        	        	<div class="border-90">
+          资金密码管理
+</div>
+        </a>
+                                
+<a class="item  "   ui-sref="ModifyPwd">
+        	        	<div class="border-100">
           修改登录密码
-
+        	        	</div>
        </a>   
         </div>
       </div>
