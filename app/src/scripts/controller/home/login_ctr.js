@@ -1,6 +1,6 @@
 //登录
-		var login_ctr = myApp.controller('login_ctr', ['$scope', '$rootScope', '$log', '$timeout', '$http', '$location', 'MyProvider', 'publicFunc', 'ioniclocalStorage', '$ionicLoading','ionicDatePicker',
-		function($scope, $rootScope, $log, $timeout, $http, $location, MyProvider, publicFunc, ioniclocalStorage,$ionicLoading,ionicDatePicker) {
+		var login_ctr = myApp.controller('login_ctr', ['$scope', '$rootScope', '$log', '$timeout', '$http', '$location', 'MyProvider', 'publicFunc', 'ioniclocalStorage', '$ionicLoading','ionicDatePicker','ionicTimePicker','ionicToast',
+		function($scope, $rootScope, $log, $timeout, $http, $location, MyProvider, publicFunc, ioniclocalStorage,$ionicLoading,ionicDatePicker,ionicTimePicker,ionicToast) {
 		$scope.mobile = "";
 		$scope.password = "";
 		//ioniclocalStorage.set('name', 'test'); 
@@ -14,8 +14,15 @@ noBackdrop: true,
 duration: 2000 ,
 animation: 'fade-in'
 });
-
-
+$scope.showToast = function(){
+//<!-- ionicToast.show(message, position, stick, time); -->
+  ionicToast.show('This is a toast at the top.', 'top', true, 2500);
+};
+$scope.showToast();
+$scope.hideToast = function(){
+  ionicToast.hide();
+};
+//日历选择
     var ipObj1 = {
       callback: function (val) {  //Mandatory
         console.log('Return value from the datepicker popup is : ' + val, new Date(val));
@@ -42,7 +49,45 @@ animation: 'fade-in'
       ionicDatePicker.openDatePicker(ipObj1);
     };
 
- $scope.openDatePicker();
+//---------------------------------------------------
+//时间选择器
+ var ipObj1 = {
+    callback: function (val) {      //Mandatory
+      if (typeof (val) === 'undefined') {
+        console.log('Time not selected');
+      } else {
+        var selectedTime = new Date(val * 1000);
+        console.log('Selected epoch is : ', val, 'and the time is ', selectedTime.getUTCHours(), 'H :', selectedTime.getUTCMinutes(), 'M');
+      }
+    },
+    inputTime: 50400,   //Optional
+    format: 12,         //Optional
+    step: 15,           //Optional
+    setLabel: '设置'    //Optional
+  };
+
+  //ionicTimePicker.openTimePicker(ipObj1);
+  
+  
+  //------------------------------
+  //raing
+    $scope.ratingsObject = {
+        iconOn: 'ion-ios-star',    //Optional
+        iconOff: 'ion-ios-star-outline',   //Optional
+        iconOnColor: 'rgb(200, 200, 100)',  //Optional
+        iconOffColor:  'rgb(200, 100, 100)',    //Optional
+        rating:  2, //Optional
+        minRating:1,    //Optional
+        readOnly: true, //Optional
+        callback: function(rating) {    //Mandatory
+          $scope.ratingsCallback(rating);
+        }
+      };
+
+      $scope.ratingsCallback = function(rating) {
+        console.log('Selected rating is : ', rating);
+      };
+
 	$scope.login = function() {
 			if($scope.mobile==""||$scope.password==""){
 			if($scope.mobile==""){

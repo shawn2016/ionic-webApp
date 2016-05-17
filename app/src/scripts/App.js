@@ -1,4 +1,4 @@
-var myApp = angular.module('ionicApp', ['ionic','ionic-datepicker'])
+var myApp = angular.module('ionicApp', ['ionic','ionic-datepicker','ionic-timepicker','ionic-ratings','ionic-toast'])
    myApp.run(function($ionicPlatform) {
         $ionicPlatform.ready(function() {
           // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -11,6 +11,7 @@ var myApp = angular.module('ionicApp', ['ionic','ionic-datepicker'])
           }
         });
       })
+   //日历
    
 myApp.config(function (ionicDatePickerProvider) {
     var datePickerObj = {
@@ -30,4 +31,17 @@ myApp.config(function (ionicDatePickerProvider) {
       disableWeekdays: [6]
     };
     ionicDatePickerProvider.configDatePicker(datePickerObj);
+  })
+
+
+//时间选择
+myApp.config(function (ionicTimePickerProvider) {
+    var timePickerObj = {
+      inputTime: (((new Date()).getHours() * 60 * 60) + ((new Date()).getMinutes() * 60)),
+      format: 12,
+      step: 15,
+      setLabel: '设置',
+      closeLabel: '关闭'
+    };
+    ionicTimePickerProvider.configTimePicker(timePickerObj);
   })
